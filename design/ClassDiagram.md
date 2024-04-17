@@ -1,39 +1,3 @@
-``` 
-    +-------------------+
-    |    Application    |
-    +-------------------+
-    | - title: String   |
-    | - virus: Virus    |
-    +-------------------+
-    | + start(): void   |
-    | + quit(): void    |
-    | + selectVirus(v: Virus): void |
-    +-------------------+
-             |
-             |
-             |
-+-------------------+     +-------------------+     +-------------------+
-|       Virus       |<----|   EnvelopedVirus |     | NonEnvelopedVirus |
-+-------------------+     +-------------------+     +-------------------+
-| - name: String    |     | - glycoprotein: String | - capsid: String  |
-| - structure: String |   +-------------------+     +-------------------+
-| - hostCell: String |   | + attach(): void  |     | + dissolveCapsid(): void |
-+-------------------+     | + infect(): void  |     +-------------------+
-| + displayStructure(): void |
-+-------------------+     | + infect(): void  |
-             |
-             |
-             |
-+-------------------+
-|    Infectable     |
-+-------------------+
-| + infect(): void  |
-+-------------------+
-```
-
-
-Based on your requirements, here's a revised class diagram that separates the infection behavior into a separate `Infectable` interface:
-
 ```markdown
     +-------------------+
     |    Application    |
