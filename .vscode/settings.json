@@ -1,13 +1,13 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "/lib/javafx-sdk-22/lib/javafx.base.jar",
-        "/lib/javafx-sdk-22/lib/javafx.controls.jar",
-        "/lib/javafx-sdk-22/lib/javafx.fxml.jar",
-        "/lib/javafx-sdk-22/lib/javafx.graphics.jar",
-        "/lib/javafx-sdk-22/lib/javafx.media.jar",
-        "/lib/javafx-sdk-22/lib/javafx.swing.jar",
-        "/lib/javafx-sdk-22/lib/javafx.web.jar",
-        "/lib/javafx-sdk-22/lib/javafx-swt.jar"
+        "/home/chutrunganh/Downloads/javafx-sdk-17.0.11/lib/javafx.base.jar",
+        "/home/chutrunganh/Downloads/javafx-sdk-17.0.11/lib/javafx.controls.jar",
+        "/home/chutrunganh/Downloads/javafx-sdk-17.0.11/lib/javafx.fxml.jar",
+        "/home/chutrunganh/Downloads/javafx-sdk-17.0.11/lib/javafx.graphics.jar",
+        "/home/chutrunganh/Downloads/javafx-sdk-17.0.11/lib/javafx.media.jar",
+        "/home/chutrunganh/Downloads/javafx-sdk-17.0.11/lib/javafx.swing.jar",
+        "/home/chutrunganh/Downloads/javafx-sdk-17.0.11/lib/javafx.web.jar",
+        "/home/chutrunganh/Downloads/javafx-sdk-17.0.11/lib/javafx-swt.jar"
     ]
 }
