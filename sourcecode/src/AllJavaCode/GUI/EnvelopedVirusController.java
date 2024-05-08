@@ -1,16 +1,9 @@
 package AllJavaCode.GUI;
-
-import java.io.IOException;
-
 import AllJavaCode.Main;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 
 
 public class EnvelopedVirusController {
@@ -29,7 +22,6 @@ public class EnvelopedVirusController {
     // } catch (IOException e) {
     //     e.printStackTrace();
     // }
-}
 
     void backToHomeClicked(MouseEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
