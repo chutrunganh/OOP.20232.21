@@ -1,4 +1,4 @@
-package AllJavaCode.Structure;
+package AllJavaCode.Structure.AbstractVirus;
 // NonEnvelopedVirus class
 
 public class NonEnvelopedVirus extends Virus {
@@ -15,6 +15,15 @@ public class NonEnvelopedVirus extends Virus {
     public String toString() {
         super.toString();
         return "";
+    }
+
+    @Override
+    public String showInfectionInText() {
+        return "Virus" + virusName + " infection by this mechanism: when reaching the target, it dissolve its capsid "  + capsid + " to release its acid nucleic " + acidNucleic + " into the host cell";
+    }
+
+    public void showInfectionInVideo() {
+        System.out.println("Non Enveloped Virus infection in video");
     }
 
 }

@@ -1,6 +1,7 @@
-package AllJavaCode.Structure;
+package AllJavaCode.Structure.AbstractVirus;
+
 // Abstract Virus class
-public abstract class Virus {
+public abstract class Virus implements Infecting{
     
     // Virus attributes
     public String virusName;

@@ -1,9 +1,14 @@
 package AllJavaCode.GUI;
+import java.io.IOException;
+
 import AllJavaCode.Main;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 
 
 public class EnvelopedVirusController {
@@ -30,6 +35,21 @@ public class EnvelopedVirusController {
 
     @FXML
     void CoronaClicked(MouseEvent event) {
+
+        //Open CoronaVirus.fxml
+           System.out.println("Corona Virus Clicked");
+
+        
+        //Change the scene to EnvelopedVirus.fxml
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("CoronaVirusUI.fxml"));
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 

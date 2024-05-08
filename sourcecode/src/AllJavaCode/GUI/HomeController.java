@@ -19,7 +19,7 @@ public class HomeController {
         
         //Change the scene to EnvelopedVirus.fxml
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("EnvelopedVirus.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("EnvelopedVirusUI.fxml"));
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
