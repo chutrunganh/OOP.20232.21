@@ -1,4 +1,4 @@
-package Structure;
+package AllJavaCode.Structure;
 // NonEnvelopedVirus class
 
 public class NonEnvelopedVirus extends Virus {

@@ -1,4 +1,4 @@
-package Structure;
+package AllJavaCode.Structure;
 // Abstract Virus class
 public abstract class Virus {
     
