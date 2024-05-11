@@ -1,10 +1,10 @@
-package AllJavaCode.Structure.SpecificVirus;
+package AllJavaCode.Structure.SpecificVirus.EnvelopedVirus;
 import AllJavaCode.Structure.AbstractVirus.EnvelopedVirus;
 
 public class RotaVirus extends EnvelopedVirus{
 
     public RotaVirus() {
-        super("Rota Virus", "RNA", "Icosahedral", 0.07f, "Spherical", "RotaVirus.jpg", "Enveloped", "VP4");
+        super("Rota Virus", "RNA", "Icosahedral", 0.07f, "Spherical", "AllJavaCode/GUI/ImageAndVideo/virus.png", "Enveloped", "VP4");
     }
 
     @Override

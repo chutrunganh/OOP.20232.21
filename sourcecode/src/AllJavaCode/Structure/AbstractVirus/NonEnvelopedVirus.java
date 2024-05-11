@@ -13,8 +13,8 @@ public class NonEnvelopedVirus extends Virus {
 
     @Override
     public String toString() {
-        super.toString();
-        return "";
+        String virusInfo = super.toString();
+        return virusInfo;
     }
 
     @Override

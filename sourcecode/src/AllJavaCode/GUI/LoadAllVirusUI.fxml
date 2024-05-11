@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AllJavaCode.GUI.EnvelopedVirusController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AllJavaCode.GUI.LoadAllVirusController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -24,32 +24,20 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <ImageView fitHeight="134.0" fitWidth="130.0" layoutX="69.0" layoutY="94.0" onMouseClicked="#CoronaClicked" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@ImageAndVideo/coronavirus.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="143.0" fitWidth="122.0" layoutX="273.0" layoutY="94.0" onMouseClicked="#RotaClicked" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@ImageAndVideo/virus.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="143.0" fitWidth="122.0" layoutX="454.0" layoutY="94.0" onMouseClicked="#HIVClicked" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@ImageAndVideo/hepatitis-b.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="100.0" layoutY="236.0" text="Corona">
+            <ImageView fx:id="image1" fitHeight="134.0" fitWidth="130.0" layoutX="69.0" layoutY="94.0" onMouseClicked="#CoronaClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image2" fitHeight="143.0" fitWidth="122.0" layoutX="273.0" layoutY="94.0" onMouseClicked="#RotaClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image3" fitHeight="143.0" fitWidth="122.0" layoutX="454.0" layoutY="94.0" onMouseClicked="#HIVClicked" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="label1" layoutX="100.0" layoutY="236.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="498.0" layoutY="236.0" text="HIV">
+            <Label fx:id="label3" layoutX="498.0" layoutY="236.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="312.0" layoutY="236.0" text="Rota">
+            <Label fx:id="label2" layoutX="312.0" layoutY="236.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>

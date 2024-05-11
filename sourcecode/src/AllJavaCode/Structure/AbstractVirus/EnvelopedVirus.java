@@ -14,10 +14,8 @@ public class EnvelopedVirus extends Virus {
     // EnvelopedVirus methods
     @Override
     public String toString() {
-        super.toString();
-        System.out.println("Glycoprotein: " + glycoprotein);
-        System.out.println("Enveloped: " + enveloped);
-        return "";
+        String virusInfo = super.toString() + "Enveloped: " + enveloped + "\n" + "Glycoprotein: " + glycoprotein + "\n";
+        return virusInfo ;
     }
 
     @Override

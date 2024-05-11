@@ -2,14 +2,14 @@ package AllJavaCode.Structure.AbstractVirus;
 
 // Abstract Virus class
 public abstract class Virus implements Infecting{
-    
+
     // Virus attributes
     public String virusName;
     public String acidNucleic;
     public String capsid;
     public float size;
     public String shape;
-    public String image;
+    public  String imagePath;
 
 
     // Virus constructor
@@ -19,18 +19,18 @@ public abstract class Virus implements Infecting{
         this.capsid = capsid;
         this.size = size;
         this.shape = shape;
-        this.image = image;
+        this.imagePath = image;
     }
     
 
     @Override
     public String toString() {
-        System.out.println("Virus Name: " + virusName);
-        System.out.println("Acid Nucleic: " + acidNucleic);
-        System.out.println("Capsid: " + capsid);
-        System.out.println("Size: " + size);
-        System.out.println("Shape: " + shape);
-        System.out.println("Image: " + image);
-        return "";
+        String virusInfo = "Virus Name: " + virusName + "\n" + "Acid Nucleic: " + acidNucleic + "\n" + "Capsid: " + capsid + "\n" + "Size: " + size + "\n" + "Shape: " + shape + "\n";
+        return virusInfo;
+    }
+
+    //Getters and Setters
+    public String getImage() {
+        return imagePath;
     }
 }
