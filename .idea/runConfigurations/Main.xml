@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="AllJavaCode.Main" />
+    <module name="OOP.20232.21" />
+    <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-17.0.11/lib --add-modules javafx.controls,javafx.fxml" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
