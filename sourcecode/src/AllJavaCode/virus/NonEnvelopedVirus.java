@@ -1,12 +1,11 @@
-package AllJavaCode.Structure.AbstractVirus;
+package AllJavaCode.virus;
 // NonEnvelopedVirus class
 
-public class NonEnvelopedVirus extends Virus {
+public abstract class NonEnvelopedVirus extends Virus {
     
-
-    // EnvelopedVirus constructor
-    public NonEnvelopedVirus(String virusName, String acidNucleic, String capsid, float size, String shape, String image) {
-        super(virusName, acidNucleic, capsid, size, shape, image);
+    public NonEnvelopedVirus() {}
+    public NonEnvelopedVirus(String virusName, float size, String shape, String image) {
+        super(virusName, size, shape, image);
     }
 
     // NonEnvelopedVirus methods

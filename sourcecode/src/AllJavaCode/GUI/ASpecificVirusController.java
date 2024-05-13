@@ -1,11 +1,11 @@
-package AllJavaCode.GUI;
+package AllJavaCode.gui;
 
 import AllJavaCode.Main;
-import AllJavaCode.Structure.SpecificVirus.EnvelopedVirus.CoronaVirus;
+import AllJavaCode.virus.CoronaVirus;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+//import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.image.ImageView;

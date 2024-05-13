@@ -1,10 +1,10 @@
-package AllJavaCode.GUI;
+package AllJavaCode.gui;
 import java.io.IOException;
 
 import AllJavaCode.Main;
-import AllJavaCode.Structure.SpecificVirus.EnvelopedVirus.CoronaVirus;
-import AllJavaCode.Structure.SpecificVirus.EnvelopedVirus.HIVVirus;
-import AllJavaCode.Structure.SpecificVirus.EnvelopedVirus.RotaVirus;
+import AllJavaCode.virus.CoronaVirus;
+import AllJavaCode.virus.HIVVirus;
+import AllJavaCode.virus.RotaVirus;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;

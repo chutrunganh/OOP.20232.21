@@ -1,4 +1,4 @@
-package AllJavaCode.GUI;
+package AllJavaCode.gui;
 
 import java.io.IOException;
 

@@ -1,22 +1,23 @@
-package AllJavaCode.Structure.AbstractVirus;
+package AllJavaCode.virus;
 
-// Abstract Virus class
-public abstract class Virus implements Infecting{
+import AllJavaCode.virus.component.AcidNucleic;
+import AllJavaCode.virus.component.Capsid;
 
-    // Virus attributes
+public abstract class Virus implements Infectable {
+
     public String virusName;
-    public String acidNucleic;
-    public String capsid;
+    public AcidNucleic acidNucleic;
+    public Capsid capsid;
     public float size;
     public String shape;
-    public  String imagePath;
+    public String imagePath;
 
 
-    // Virus constructor
-    public Virus(String virusName, String acidNucleic, String capsid, float size, String shape, String image) {
+    public Virus() {} // rewrite constructors
+    public Virus(String virusName, float size, String shape, String image) {
         this.virusName = virusName;
-        this.acidNucleic = acidNucleic;
-        this.capsid = capsid;
+        this.acidNucleic = new AcidNucleic();
+        this.capsid = new Capsid();
         this.size = size;
         this.shape = shape;
         this.imagePath = image;
