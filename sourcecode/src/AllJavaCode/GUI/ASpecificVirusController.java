@@ -1,8 +1,12 @@
 package AllJavaCode.gui;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import AllJavaCode.Main;
 import AllJavaCode.virus.CoronaVirus;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
 //import javafx.scene.control.TextField;
@@ -11,16 +15,17 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class ASpecificVirusController {
+public class ASpecificVirusController implements Initializable{
 
     @FXML
     private TextArea taVirusInfo;
     @FXML
     private ImageView virusImage;
+    @FXML private ImageView homeButton;
     @FXML
     private TextArea taVirusInfectMechanism;
 
-    public void initialize() {
+    public void initialize(URL locations, ResourceBundle resources) {
        //Initiate base on the Virus chosen
         if (LoadAllVirusController.chosenVirus.equals("Corona")) {
             CoronaVirus coronaVirus = new CoronaVirus();

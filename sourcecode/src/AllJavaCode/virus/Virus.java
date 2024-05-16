@@ -5,7 +5,7 @@ import AllJavaCode.virus.component.Capsid;
 
 public abstract class Virus implements Infectable {
 
-    public String virusName;
+    public String name;
     public AcidNucleic acidNucleic;
     public Capsid capsid;
     public float size;
@@ -13,9 +13,13 @@ public abstract class Virus implements Infectable {
     public String imagePath;
 
 
-    public Virus() {} // rewrite constructors
-    public Virus(String virusName, float size, String shape, String image) {
-        this.virusName = virusName;
+    public Virus() {
+        this.acidNucleic = new AcidNucleic();
+        this.capsid = new Capsid();
+    } // rewrite constructors
+    
+    public Virus(String name, float size, String shape, String image) {
+        this.name = name;
         this.acidNucleic = new AcidNucleic();
         this.capsid = new Capsid();
         this.size = size;
@@ -26,7 +30,7 @@ public abstract class Virus implements Infectable {
 
     @Override
     public String toString() {
-        String virusInfo = "Virus Name: " + virusName + "\n" + "Acid Nucleic: " + acidNucleic + "\n" + "Capsid: " + capsid + "\n" + "Size: " + size + "\n" + "Shape: " + shape + "\n";
+        String virusInfo = "Virus Name: " + name + "\n" + "Acid Nucleic: " + acidNucleic + "\n" + "Capsid: " + capsid + "\n" + "Size: " + size + "\n" + "Shape: " + shape + "\n";
         return virusInfo;
     }
 

@@ -1,25 +1,31 @@
 package AllJavaCode.gui;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
-public class HomeController {
+public class HomeController implements Initializable {
 
+    @FXML private ImageView envelopedVirusImage;
+    @FXML private ImageView nonEnvelopedVirusImage;
+    @FXML private Button helpButton;
     public static String chosenTypeOfVirus; //Store the chosen type  Enveloped or Non-Enveloped Virus
 
     @FXML
-    void EnvelopedVirusClicked(MouseEvent event) {
+    void envelopedVirusClicked(MouseEvent event) {
         System.out.println("Enveloped Virus Clicked");
         chosenTypeOfVirus = "Enveloped";
-
-        
         //Change the scene to EnvelopedVirus.fxml
         try {
             Parent root = FXMLLoader.load(getClass().getResource("LoadAllVirusUI.fxml"));
@@ -34,8 +40,12 @@ public class HomeController {
 
 
     @FXML
-    void NonEnvelopedVirusClicked(MouseEvent event) {
+    void nonEnvelopedVirusClicked(MouseEvent event) {
         System.out.println("Non-Enveloped Virus Clicked");
     }
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {}
 
 }

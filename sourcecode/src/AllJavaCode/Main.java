@@ -14,13 +14,9 @@ public class Main extends Application {
     public static Scene homeScene;
     //Store the home scene so that we can go back to it later, since evry other scene all have a back button to go back to home scene
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("GUI/HomeUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sourcecode/src/AllJavaCode/gui/HomeUI.fxml"));
 
         homeScene = new Scene(root);
 
@@ -40,4 +36,9 @@ public class Main extends Application {
             }
         });
     }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
 }

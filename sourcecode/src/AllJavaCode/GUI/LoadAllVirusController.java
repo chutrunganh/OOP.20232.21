@@ -1,5 +1,7 @@
 package AllJavaCode.gui;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import AllJavaCode.Main;
 import AllJavaCode.virus.CoronaVirus;
@@ -7,6 +9,7 @@ import AllJavaCode.virus.HIVVirus;
 import AllJavaCode.virus.RotaVirus;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -17,7 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 
-public class LoadAllVirusController {
+public class LoadAllVirusController implements Initializable {
 
     @FXML
     private ImageView image1;
@@ -44,9 +47,9 @@ public class LoadAllVirusController {
             HIVVirus hivVirus = new HIVVirus();
             RotaVirus rotaVirus = new RotaVirus();
 
-            label1.setText(coronaVirus.virusName);
-            label2.setText(hivVirus.virusName);
-            label3.setText(rotaVirus.virusName);
+            label1.setText(coronaVirus.name);
+            label2.setText(hivVirus.name);
+            label3.setText(rotaVirus.name);
             image1.setImage(new Image(coronaVirus.getImage()));
             image2.setImage(new Image(hivVirus.getImage()));
             image3.setImage(new Image(rotaVirus.getImage()));
@@ -78,13 +81,9 @@ public class LoadAllVirusController {
 
     @FXML
     void CoronaClicked(MouseEvent event) {
+        System.out.println("Corona Virus Clicked");
+        chosenVirus = "Corona";
 
-        //Open CoronaVirus.fxml
-           System.out.println("Corona Virus Clicked");
-           chosenVirus = "Corona";
-
-        
-        //Change the scene to EnvelopedVirus.fxml
         try {
             Parent root = FXMLLoader.load(getClass().getResource("ASpecificVirusUI.fxml"));
             Scene scene = new Scene(root);
@@ -94,7 +93,6 @@ public class LoadAllVirusController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @FXML
@@ -108,5 +106,8 @@ public class LoadAllVirusController {
         System.out.println("Rota Virus Clicked");
         chosenVirus = "Rota";
     }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {}
 
 }
