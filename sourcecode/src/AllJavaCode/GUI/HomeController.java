@@ -22,6 +22,9 @@ public class HomeController implements Initializable {
     @FXML private Button helpButton;
     public static String chosenTypeOfVirus; //Store the chosen type  Enveloped or Non-Enveloped Virus
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {}
+
     @FXML
     void envelopedVirusClicked(MouseEvent event) {
         System.out.println("Enveloped Virus Clicked");
@@ -38,14 +41,10 @@ public class HomeController implements Initializable {
         }
     }
 
-
     @FXML
     void nonEnvelopedVirusClicked(MouseEvent event) {
         System.out.println("Non-Enveloped Virus Clicked");
     }
 
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {}
-
+    
 }

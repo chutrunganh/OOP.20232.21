@@ -16,25 +16,28 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/sourcecode/src/AllJavaCode/gui/HomeUI.fxml"));
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/sourcecode/src/AllJavaCode/gui/HomeUI.fxml"));
+            homeScene = new Scene(root);
 
-        homeScene = new Scene(root);
+            primaryStage.setTitle("Virus Explorer");
+            primaryStage.setScene(homeScene);
+            primaryStage.show();
 
-        primaryStage.setTitle("Virus Explorer");
-        primaryStage.setScene(homeScene);
-        primaryStage.show();
+            primaryStage.setOnCloseRequest(event -> {
+                event.consume(); // This will prevent the window from closing immediately
 
-        primaryStage.setOnCloseRequest(event -> {
-            event.consume(); // This will prevent the window from closing immediately
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Confirmation");
+                alert.setHeaderText("Are you sure you want to exit?");
 
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmation");
-            alert.setHeaderText("Are you sure you want to exit?");
-
-            if (alert.showAndWait().get() == ButtonType.OK) {
-                primaryStage.close(); // This will close the window
-            }
-        });
+                if (alert.showAndWait().get() == ButtonType.OK) {
+                    primaryStage.close(); // This will close the window
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
