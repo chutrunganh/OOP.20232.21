@@ -22,24 +22,18 @@ import javafx.scene.Scene;
 
 public class LoadAllVirusController implements Initializable {
 
-    @FXML
-    private ImageView image1;
-    @FXML
-    private ImageView image2;
-    @FXML
-    private ImageView image3;
-    @FXML
-    private Label label1;
-    @FXML
-    private Label label2;
-    @FXML
-    private Label label3;
+    @FXML private ImageView image1;
+    @FXML private ImageView image2;
+    @FXML private ImageView image3;
+    @FXML private Label label1;
+    @FXML private Label label2;
+    @FXML private Label label3;
 
     public static String chosenVirus; //Store the chosen a specific virus among the all Virus in enveloped/non enveloped Virus
 
-    @FXML
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
     //Initiate the Label and Image for the virus
-    public void initialize() {
 
         //Initiate the Scene base on the Type of Virus chosen from the HomeController
         if (HomeController.chosenTypeOfVirus.equals("Enveloped")) {
@@ -56,8 +50,6 @@ public class LoadAllVirusController implements Initializable {
         } else {
             System.out.println("Non-Enveloped Virus Chosen");
         }
-
-
     }
 
     @FXML
@@ -107,7 +99,5 @@ public class LoadAllVirusController implements Initializable {
         chosenVirus = "Rota";
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {}
 
 }
