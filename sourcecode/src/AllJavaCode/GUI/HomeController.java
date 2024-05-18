@@ -44,6 +44,10 @@ public class HomeController implements Initializable {
         System.out.println("Non-Enveloped Virus Clicked");
     }
 
+    @FXML
+    void helpButtonClicked(MouseEvent event) {
+        System.out.println("Help button clicked.");
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {}
