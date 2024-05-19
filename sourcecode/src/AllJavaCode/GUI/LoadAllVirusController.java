@@ -37,10 +37,28 @@ public class LoadAllVirusController implements Initializable {
     //Initiate the Label and Image for the virus
 
         //Initiate the Scene base on the Type of Virus chosen from the HomeController
+<<<<<<< HEAD
         // if (HomeController.chosenTypeOfVirus.equals("Enveloped")) {
         //     CoronaVirus coronaVirus = new CoronaVirus();
         //     HIVVirus hivVirus = new HIVVirus();
         //     RotaVirus rotaVirus = new RotaVirus();
+=======
+        if (HomeController.chosenTypeOfVirus.equals("Enveloped")) {
+            CoronaVirus coronaVirus = new CoronaVirus();
+            HIVVirus hivVirus = new HIVVirus();
+            RotaVirus rotaVirus = new RotaVirus();
+
+            label1.setText(coronaVirus.getName());
+            label2.setText(hivVirus.getName());
+            label3.setText(rotaVirus.getName());
+            image1.setImage(new Image(coronaVirus.getImagePath()));
+            image2.setImage(new Image(hivVirus.getImagePath()));
+            image3.setImage(new Image(rotaVirus.getImagePath()));
+        } else {
+            System.out.println("Non-Enveloped Virus Chosen");
+        }
+
+>>>>>>> master
 
         //     label1.setText(coronaVirus.name);
         //     label2.setText(hivVirus.name);

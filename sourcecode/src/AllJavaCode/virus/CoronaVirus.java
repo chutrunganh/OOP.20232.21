@@ -2,14 +2,8 @@ package AllJavaCode.virus;
 
 public class CoronaVirus extends EnvelopedVirus{
 
-    public CoronaVirus() {}
-    // public CoronaVirus() {
-    //     super("Corona Virus", "RNA", "Helical", 0.1f, "Spherical", "AllJavaCode/GUI/ImageAndVideo/coronavirus.png", "Enveloped", "Spike Glycoprotein");
-    // }
-
-    @Override
-    public String showInfectionInText() {
-        return super.showInfectionInText();
+    public CoronaVirus() {
+        super("Corona Virus", "RNA", "Helical", "Spherical", 0.1f, "Spike Glycoprotein");
     }
 
     @Override

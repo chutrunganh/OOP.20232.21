@@ -2,14 +2,8 @@ package AllJavaCode.virus;
 
 public class HIVVirus extends EnvelopedVirus{
     
-    public HIVVirus() {}
-    // public HIVVirus() {
-    //     super("HIV Virus", "RNA", "Icosahedral", 0.1f, "Spherical", "AllJavaCode/GUI/ImageAndVideo/hepatitis-b.png", "Enveloped", "GP120");
-    // }
-
-    @Override
-    public String showInfectionInText() {
-        return super.showInfectionInText();
+    public HIVVirus() {
+        super("HIV Virus", "RNA", "Icosahedral",  "Spherical", 0.1f, "GP120");
     }
 
     @Override
