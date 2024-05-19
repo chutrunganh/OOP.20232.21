@@ -4,12 +4,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import AllJavaCode.Main;
-import AllJavaCode.virus.CoronaVirus;
-import AllJavaCode.virus.HIVVirus;
-import AllJavaCode.virus.RotaVirus;
+import AllJavaCode.virus.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -28,6 +27,8 @@ public class LoadAllVirusController implements Initializable {
     @FXML private Label label1;
     @FXML private Label label2;
     @FXML private Label label3;
+    @FXML private ImageView homeButton;
+    @FXML private Button helpButton;
 
     public static String chosenVirus; //Store the chosen a specific virus among the all Virus in enveloped/non enveloped Virus
 
@@ -36,20 +37,20 @@ public class LoadAllVirusController implements Initializable {
     //Initiate the Label and Image for the virus
 
         //Initiate the Scene base on the Type of Virus chosen from the HomeController
-        if (HomeController.chosenTypeOfVirus.equals("Enveloped")) {
-            CoronaVirus coronaVirus = new CoronaVirus();
-            HIVVirus hivVirus = new HIVVirus();
-            RotaVirus rotaVirus = new RotaVirus();
+        // if (HomeController.chosenTypeOfVirus.equals("Enveloped")) {
+        //     CoronaVirus coronaVirus = new CoronaVirus();
+        //     HIVVirus hivVirus = new HIVVirus();
+        //     RotaVirus rotaVirus = new RotaVirus();
 
-            label1.setText(coronaVirus.name);
-            label2.setText(hivVirus.name);
-            label3.setText(rotaVirus.name);
-            image1.setImage(new Image(coronaVirus.getImage()));
-            image2.setImage(new Image(hivVirus.getImage()));
-            image3.setImage(new Image(rotaVirus.getImage()));
-        } else {
-            System.out.println("Non-Enveloped Virus Chosen");
-        }
+        //     label1.setText(coronaVirus.name);
+        //     label2.setText(hivVirus.name);
+        //     label3.setText(rotaVirus.name);
+        //     image1.setImage(new Image(coronaVirus.getImage()));
+        //     image2.setImage(new Image(hivVirus.getImage()));
+        //     image3.setImage(new Image(rotaVirus.getImage()));
+        // } else {
+        //     System.out.println("Non-Enveloped Virus Chosen");
+        // }
     }
 
     @FXML
@@ -66,9 +67,14 @@ public class LoadAllVirusController implements Initializable {
     //     e.printStackTrace();
     // }
 
-    void backToHomeClicked(MouseEvent event) {
+    void homeButtonClicked(MouseEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(Main.homeScene);
+    }
+
+    @FXML
+    void helpButtonClicked(MouseEvent event) {
+        
     }
 
     @FXML

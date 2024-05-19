@@ -14,31 +14,31 @@
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
 
-            <ImageView fx:id="envelopedVirusImage" fitHeight="208.0" fitWidth="200.0" layoutX="83.0" layoutY="101.0" onMouseClicked="#envelopedVirusClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="envelopedVirusImage" fitHeight="208.0" fitWidth="200.0" layoutX="74.0" layoutY="87.0" onMouseClicked="#envelopedVirusClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@ImageAndVideo/coronavirus.png" />
                </image>
             </ImageView>
 
-            <ImageView fx:id="nonEnvelopedVirusImage" fitHeight="200.0" fitWidth="200.0" layoutX="376.0" layoutY="101.0" onMouseClicked="#nonEnvelopedVirusClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="nonEnvelopedVirusImage" fitHeight="200.0" fitWidth="200.0" layoutX="367.0" layoutY="87.0" onMouseClicked="#nonEnvelopedVirusClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@ImageAndVideo/hepatitis-b.png" />
                </image>
             </ImageView>
 
-            <Label layoutX="115.0" layoutY="315.0" text="Enveloped Virus">
+            <Label layoutX="106.0" layoutY="308.0" text="Enveloped Virus">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
 
-            <Label layoutX="389.0" layoutY="315.0" text="Non Enveloped Virus">
+            <Label layoutX="380.0" layoutY="308.0" text="Non Enveloped Virus">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Button fx:id="helpButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" text="Help" />
-            <Label layoutX="28.0" layoutY="38.0" text="Virus Structure and Infection Demonstration">
+            <Button fx:id="helpButton" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#helpButtonClicked" prefHeight="30.0" prefWidth="50.0" text="Help" />
+            <Label layoutX="28.0" layoutY="23.0" text="Virus Structure and Infection Demonstration">
                <font>
                   <Font size="32.0" />
                </font>
