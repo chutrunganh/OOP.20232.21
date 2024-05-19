@@ -47,12 +47,12 @@ public class LoadAllVirusController implements Initializable {
             HIVVirus hivVirus = new HIVVirus();
             RotaVirus rotaVirus = new RotaVirus();
 
-            label1.setText(coronaVirus.name);
-            label2.setText(hivVirus.name);
-            label3.setText(rotaVirus.name);
-            image1.setImage(new Image(coronaVirus.getImage()));
-            image2.setImage(new Image(hivVirus.getImage()));
-            image3.setImage(new Image(rotaVirus.getImage()));
+            label1.setText(coronaVirus.getName());
+            label2.setText(hivVirus.getName());
+            label3.setText(rotaVirus.getName());
+            image1.setImage(new Image(coronaVirus.getImagePath()));
+            image2.setImage(new Image(hivVirus.getImagePath()));
+            image3.setImage(new Image(rotaVirus.getImagePath()));
         } else {
             System.out.println("Non-Enveloped Virus Chosen");
         }

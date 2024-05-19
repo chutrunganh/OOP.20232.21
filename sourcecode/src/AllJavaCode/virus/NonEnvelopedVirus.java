@@ -1,25 +1,23 @@
 package AllJavaCode.virus;
-// NonEnvelopedVirus class
 
 public class NonEnvelopedVirus extends Virus {
     
-    public NonEnvelopedVirus() {
-        super();
+    public NonEnvelopedVirus(String name, String acidNucleicType, String capsidShape, String shape, float size) {
+        super(name, acidNucleicType, capsidShape, shape, size);
     }
-
-    public NonEnvelopedVirus(String virusName, float size, String shape, String image) {
-        super(virusName, size, shape, image);
-    }
-
-    // NonEnvelopedVirus methods
 
     @Override
     public String showInfectionInText() {
-        return "Virus" + name + " infection by this mechanism: when reaching the target, it dissolve its capsid "  + capsid + " to release its acid nucleic " + acidNucleic + " into the host cell";
+        return "infection in text";
     }
 
+    @Override
     public void showInfectionInVideo() {
         System.out.println("Non Enveloped Virus infection in video");
     }
 
+    @Override
+    public String getImagePath() {
+        return "sourcecode/src/AllJavaCode/gui/image/NonEnvelopedVirus/" + getName();
+    }
 }

@@ -1,37 +1,28 @@
 package AllJavaCode.virus;
 
-import AllJavaCode.virus.component.LipidEnvelop;
-import AllJavaCode.virus.component.Glycoprotein;
+import AllJavaCode.virus.component.LipidEnvelope;
 
 public class EnvelopedVirus extends Virus {
-    public LipidEnvelop envelop;
-    public Glycoprotein glycoprotein; // add Glycoprotein component and change data type
 
-    public EnvelopedVirus() {
-        super();
+    public LipidEnvelope envelope;
+
+    public EnvelopedVirus(String name, String acidNucleicType, String capsidShape, String shape, float size, String anchorType) {
+        super(name, acidNucleicType, capsidShape, shape, size);
+        envelope = new LipidEnvelope(anchorType);
     }
-
-    public EnvelopedVirus(String virusName, float size, String shape, String image) {
-        super(virusName, size, shape, image);
-        this.envelop = new LipidEnvelop();
-        this.glycoprotein = new Glycoprotein(); // new Glycoprotein()
-    }
-
-    // EnvelopedVirus methods
-    // @Override
-    // public String toString() {
-    //     String virusInfo = super.toString() + "Enveloped: " + envelop.toString() + "\n" + "Glycoprotein: " + glycoprotein + "\n";
-    //     return virusInfo ;
-    // }
 
     @Override
     public String showInfectionInText() {
-        return "Virus" + name + " infection by this mechanism: when reaching the host with the suitable outer structure, it uses its glycoprotein " + glycoprotein + " to attach to attach, then inject its acid nucleic " + acidNucleic + " into the host cell";
+        return "infection in text";
     }
 
+    @Override
     public void showInfectionInVideo() {
         System.out.println("Enveloped Virus infection in video");
     }
 
-    // method for dissolving capsid?
+    @Override
+    public String getImagePath() {
+        return "sourcecode/src/AllJavaCode/gui/image/EnvelopedVirus/" + getName();
+    }
 }

@@ -5,37 +5,39 @@ import AllJavaCode.virus.component.Capsid;
 
 public abstract class Virus implements Infectable {
 
-    public String name;
-    public AcidNucleic acidNucleic;
-    public Capsid capsid;
-    public float size;
-    public String shape;
-    public String imagePath;
-
-
-    public Virus() {
-        this.acidNucleic = new AcidNucleic();
-        this.capsid = new Capsid();
-    } // rewrite constructors
+    private String name;
+    private AcidNucleic acidNucleic;
+    private Capsid capsid;
+    private String shape; // linear, circular, segmented
+    private float size;
     
-    public Virus(String name, float size, String shape, String image) {
+    public Virus(String name, String acidNucleicType, String capsidShape, String shape, float size) {
         this.name = name;
-        this.acidNucleic = new AcidNucleic();
-        this.capsid = new Capsid();
-        this.size = size;
+        this.acidNucleic = new AcidNucleic(acidNucleicType);
+        this.capsid = new Capsid(capsidShape);
         this.shape = shape;
-        this.imagePath = image;
-    }
-    
-
-    @Override
-    public String toString() {
-        String virusInfo = "Virus Name: " + name + "\n" + "Acid Nucleic: " + acidNucleic + "\n" + "Capsid: " + capsid + "\n" + "Size: " + size + "\n" + "Shape: " + shape + "\n";
-        return virusInfo;
+        this.size = size;
     }
 
-    //Getters and Setters
-    public String getImage() {
-        return imagePath;
+    public String getName() {
+        return name;
     }
+
+    public String getShape() {
+        return shape;
+    }
+
+    public float getSize() {
+        return size;
+    }
+
+    public String getAcidNucleic() {
+        return acidNucleic.toString();
+    }
+
+    public String getCapsid() {
+        return capsid.toString();
+    }
+
+    public abstract String getImagePath();
 }

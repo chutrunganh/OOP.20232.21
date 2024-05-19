@@ -30,7 +30,7 @@ public class ASpecificVirusController implements Initializable{
         if (LoadAllVirusController.chosenVirus.equals("Corona")) {
             CoronaVirus coronaVirus = new CoronaVirus();
             taVirusInfo.setText(coronaVirus.toString());
-            virusImage.setImage(new Image(coronaVirus.getImage()));
+            virusImage.setImage(new Image(coronaVirus.getImagePath()));
             taVirusInfectMechanism.setText(coronaVirus.showInfectionInText());
         }
         else if (LoadAllVirusController.chosenVirus.equals("HIV")) {
