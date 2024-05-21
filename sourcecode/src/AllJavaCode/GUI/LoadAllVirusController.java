@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import AllJavaCode.Main;
 import AllJavaCode.virus.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +14,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 
@@ -29,80 +27,99 @@ public class LoadAllVirusController implements Initializable {
     @FXML private Label label3;
     @FXML private ImageView homeButton;
     @FXML private Button helpButton;
-    private DataModel model;
 
+    private DataModel model;
+    private Virus firstVirus, secondVirus, thirdVirus;
+
+    public LoadAllVirusController() {
+        this.model = new DataModel();
+    }
     public LoadAllVirusController(DataModel model) {
         this.model = model;
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-    //Initiate the Label and Image for the virus
-
         //Initiate the Scene base on the Type of Virus chosen from the HomeController
-        // if (HomeController.chosenTypeOfVirus.equals("Enveloped")) {
-        //     CoronaVirus coronaVirus = new CoronaVirus();
-        //     HIVVirus hivVirus = new HIVVirus();
-        //     RotaVirus rotaVirus = new RotaVirus();
-
-        //     label1.setText(coronaVirus.name);
-        //     label2.setText(hivVirus.name);
-        //     label3.setText(rotaVirus.name);
-        //     image1.setImage(new Image(coronaVirus.getImage()));
-        //     image2.setImage(new Image(hivVirus.getImage()));
-        //     image3.setImage(new Image(rotaVirus.getImage()));
-        // } else {
-        //     System.out.println("Non-Enveloped Virus Chosen");
-        // }
+        switch (model.getType()) {
+        case "Enveloped":
+            firstVirus = new CoronaVirus();
+            secondVirus = new RotaVirus();
+            thirdVirus = new HIVVirus();
+            // bind properties of viruses to nodes of scene
+        case "Non-Enveloped":
+            // add non-enveloped viruses and do similarly to above
+            firstVirus = new CoronaVirus();
+            secondVirus = new RotaVirus();
+            thirdVirus = new HIVVirus();
+        }
     }
 
     @FXML
-    void backToHomeClicked(MouseEvent event) {
+    void homeButtonClicked(MouseEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("HomeUI.fxml"));
-            Scene scene = new Scene(root);
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("gui/HomeUI.fxml"));
+            loader.setController(new HomeController(model));
+
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
+            stage.setScene(new Scene(loader.load()));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-
 
     @FXML
     void helpButtonClicked(MouseEvent event) {
-        
+        // create help scene with home button
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("gui/HelpScene.fxml"));
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("Help button clicked.");
     }
 
     @FXML
-    void CoronaClicked(MouseEvent event) {
-        System.out.println("Corona Virus Clicked");
-        model.setVirus(new CoronaVirus());
+    void firstVirusClicked(MouseEvent event) {
+        //System.out.println(firstVirus.getName() + " Clicked");
+        model.setVirus(firstVirus);
+        switchNextScene(event);
+    }
 
+    @FXML
+    void secondVirusClicked(MouseEvent event) {
+        //System.out.println(secondVirus.getName() + " Clicked");
+        model.setVirus(secondVirus);
+        switchNextScene(event);
+    }
+
+    @FXML
+    void thirdVirusClicked(MouseEvent event) {
+        //System.out.println(thirdVirus.getName() + " Clicked");
+        model.setVirus(thirdVirus);
+        switchNextScene(event);
+    }
+
+    void switchNextScene(MouseEvent event) {
+        // switch to virus demonstration
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("ASpecificVirusUI.fxml"));
-            Scene scene = new Scene(root);
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("gui/ASpecificVirusUI.fxml"));
+            loader.setController(new ASpecificVirusController(model));
+            
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
+            stage.setScene(new Scene(loader.load()));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    @FXML
-    void HIVClicked(MouseEvent event) {
-        System.out.println("HIV Virus Clicked");
-        model.setVirus(new HIVVirus());
-    }
-
-    @FXML
-    void RotaClicked(MouseEvent event) {
-        System.out.println("Rota Virus Clicked");
-        model.setVirus(new RotaVirus());
-    }
-
 
 }

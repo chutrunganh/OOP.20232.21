@@ -25,23 +25,46 @@ public class ASpecificVirusController implements Initializable{
     @FXML private TextArea taVirusInfectMechanism;
     private DataModel model;
 
+    public ASpecificVirusController() {
+        this.model = new DataModel();
+    }
     public ASpecificVirusController(DataModel model) {
         this.model = model;
     }
 
-    public void initialize(URL locations, ResourceBundle resources) {}
+    public void initialize(URL locations, ResourceBundle resources) {
+        // bind properties from model
+    }
 
     @FXML
-    void backToHomeClicked(MouseEvent event) {
+    void homeButtonClicked(MouseEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("HomeUI.fxml"));
-            Scene scene = new Scene(root);
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("gui/HomeUI.fxml"));
+            loader.setController(new HomeController(model));
+
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
+            stage.setScene(new Scene(loader.load()));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    @FXML
+    void helpButtonClicked(MouseEvent event) {
+        // create help scene with home button
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("gui/HelpScene.fxml"));
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("Help button clicked.");
+    }
+    
 }

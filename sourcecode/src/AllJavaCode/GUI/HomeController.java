@@ -7,7 +7,6 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -22,6 +21,9 @@ public class HomeController implements Initializable {
     @FXML private Button helpButton;
     private DataModel model;
 
+    public HomeController() {
+        this.model = new DataModel();
+    }
     public HomeController(DataModel model) {
         this.model = model;
     }
@@ -32,26 +34,46 @@ public class HomeController implements Initializable {
     @FXML
     void envelopedVirusClicked(MouseEvent event) {
         model.setType("Enveloped");
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("LoadAllVirusUI.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Enveloped Virus Clicked");
+        System.out.println(model.getType());
+        switchNextScene(event);
     }
 
     @FXML
     void nonEnvelopedVirusClicked(MouseEvent event) {
-        System.out.println("Non-Enveloped Virus Clicked");
+        model.setType("Non-Enveloped");
+        System.out.println(model.getType());
+        switchNextScene(event);
     }
 
     @FXML
     void helpButtonClicked(MouseEvent event) {
+        // create help scene with home button
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("gui/HelpScene.fxml"));
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         System.out.println("Help button clicked.");
     }
 
+    void switchNextScene(MouseEvent event) {
+        // switch to virus selection
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("gui/LoadAllVirusUI.fxml"));
+            loader.setController(new LoadAllVirusController(model));
+            
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
 }
