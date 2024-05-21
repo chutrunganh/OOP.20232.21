@@ -33,4 +33,8 @@ public abstract class Virus implements Infecting{
     public String getImage() {
         return imagePath;
     }
+    @Override
+    public String showInfectionInVideo() {
+        return "sourcecode/src/AllJavaCode/GUI/ImageAndVideo/"+virusName+".mp4";
+    }
 }

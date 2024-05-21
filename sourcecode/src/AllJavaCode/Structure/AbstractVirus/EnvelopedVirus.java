@@ -22,10 +22,9 @@ public class EnvelopedVirus extends Virus {
     public String showInfectionInText() {
         return "Virus" + virusName + " infection by this mechanism: when reaching the host with the suitable outer structure, it uses its glycoprotein " + glycoprotein + " to attach to attach, then inject its acid nucleic " + acidNucleic + " into the host cell";
     }
-
-    public void showInfectionInVideo() {
-        System.out.println("Enveloped Virus infection in video");
+    @Override
+    public String showInfectionInVideo() {
+        return super.showInfectionInVideo();
     }
-
     
 }
