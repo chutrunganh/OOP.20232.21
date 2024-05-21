@@ -59,7 +59,7 @@ public class LoadAllVirusController implements Initializable {
     void homeButtonClicked(MouseEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("gui/HomeUI.fxml"));
+            loader.setLocation(getClass().getResource("HomeUI.fxml"));
             loader.setController(new HomeController(model));
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -75,7 +75,7 @@ public class LoadAllVirusController implements Initializable {
         // create help scene with home button
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("gui/HelpScene.fxml"));
+            loader.setLocation(getClass().getResource("HelpScene.fxml"));
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(loader.load()));
