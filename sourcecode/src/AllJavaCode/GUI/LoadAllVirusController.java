@@ -29,36 +29,21 @@ public class LoadAllVirusController implements Initializable {
     @FXML private Label label3;
     @FXML private ImageView homeButton;
     @FXML private Button helpButton;
+    private DataModel model;
 
-    public static String chosenVirus; //Store the chosen a specific virus among the all Virus in enveloped/non enveloped Virus
+    public LoadAllVirusController(DataModel model) {
+        this.model = model;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     //Initiate the Label and Image for the virus
 
         //Initiate the Scene base on the Type of Virus chosen from the HomeController
-<<<<<<< HEAD
         // if (HomeController.chosenTypeOfVirus.equals("Enveloped")) {
         //     CoronaVirus coronaVirus = new CoronaVirus();
         //     HIVVirus hivVirus = new HIVVirus();
         //     RotaVirus rotaVirus = new RotaVirus();
-=======
-        if (HomeController.chosenTypeOfVirus.equals("Enveloped")) {
-            CoronaVirus coronaVirus = new CoronaVirus();
-            HIVVirus hivVirus = new HIVVirus();
-            RotaVirus rotaVirus = new RotaVirus();
-
-            label1.setText(coronaVirus.getName());
-            label2.setText(hivVirus.getName());
-            label3.setText(rotaVirus.getName());
-            image1.setImage(new Image(coronaVirus.getImagePath()));
-            image2.setImage(new Image(hivVirus.getImagePath()));
-            image3.setImage(new Image(rotaVirus.getImagePath()));
-        } else {
-            System.out.println("Non-Enveloped Virus Chosen");
-        }
-
->>>>>>> master
 
         //     label1.setText(coronaVirus.name);
         //     label2.setText(hivVirus.name);
@@ -72,23 +57,19 @@ public class LoadAllVirusController implements Initializable {
     }
 
     @FXML
-
-    //DO NOT do like this, this is create a new HomeUI instance instead of go back to previous HomeUI
-    // void backToHomeClicked(MouseEvent event) {
-    // try {
-    //     Parent root = FXMLLoader.load(getClass().getResource("HomeUI.fxml"));
-    //     Scene scene = new Scene(root);
-    //     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    //     stage.setScene(scene);
-    //     stage.show();
-    // } catch (IOException e) {
-    //     e.printStackTrace();
-    // }
-
-    void homeButtonClicked(MouseEvent event) {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(Main.homeScene);
+    void backToHomeClicked(MouseEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("HomeUI.fxml"));
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+
 
     @FXML
     void helpButtonClicked(MouseEvent event) {
@@ -98,7 +79,7 @@ public class LoadAllVirusController implements Initializable {
     @FXML
     void CoronaClicked(MouseEvent event) {
         System.out.println("Corona Virus Clicked");
-        chosenVirus = "Corona";
+        model.setVirus(new CoronaVirus());
 
         try {
             Parent root = FXMLLoader.load(getClass().getResource("ASpecificVirusUI.fxml"));
@@ -114,13 +95,13 @@ public class LoadAllVirusController implements Initializable {
     @FXML
     void HIVClicked(MouseEvent event) {
         System.out.println("HIV Virus Clicked");
-        chosenVirus = "HIV";
+        model.setVirus(new HIVVirus());
     }
 
     @FXML
     void RotaClicked(MouseEvent event) {
         System.out.println("Rota Virus Clicked");
-        chosenVirus = "Rota";
+        model.setVirus(new RotaVirus());
     }
 
 
