@@ -11,4 +11,9 @@ public class CoronaVirus extends EnvelopedVirus{
         System.out.println("Corona Virus infection in video");
     }
 
+    @Override
+    public String getImagePath() {
+        return super.getImagePath() + getName();
+    }
+
 }

@@ -10,8 +10,15 @@ public class Capsid extends VirusComponent{
     }
 
     @Override
-    public String toString() {
-        return "Capsid:\n\tSHape:" + shape;
+    public String getDetails() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.getDetails());
+        sb.append("\n\tShape: ");
+        sb.append(shape);
+        sb.append("\n\tFunctions:");
+        sb.append("\n\t\t- Protect and deliver the genome (i.e., the nucleic acid)");
+        sb.append("\n\t\t- Interact with the host");
+        return sb.toString();
     }
     
 }

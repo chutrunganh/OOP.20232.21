@@ -2,8 +2,8 @@ package AllJavaCode.virus;
 
 public class NonEnvelopedVirus extends Virus {
     
-    public NonEnvelopedVirus(String name, String acidNucleicType, String capsidShape, String shape, float size) {
-        super(name, acidNucleicType, capsidShape, shape, size);
+    public NonEnvelopedVirus(String name, String nucleicAcidType, String capsidShape, String shape, float size) {
+        super(name, nucleicAcidType, capsidShape, shape, size);
     }
 
     @Override
@@ -18,6 +18,6 @@ public class NonEnvelopedVirus extends Virus {
 
     @Override
     public String getImagePath() {
-        return "image/" + getName() + ".png";
+        return super.getImagePath() + "NonEnvelopedViruses/";
     }
 }

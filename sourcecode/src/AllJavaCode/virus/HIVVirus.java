@@ -13,6 +13,6 @@ public class HIVVirus extends EnvelopedVirus{
 
     @Override
     public String getImagePath() {
-        return "image/hepatitis-b.png";
+        return super.getImagePath() + getName();
     }
 }

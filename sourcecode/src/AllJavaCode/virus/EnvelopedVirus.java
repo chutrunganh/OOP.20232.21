@@ -1,16 +1,20 @@
 package AllJavaCode.virus;
 
-import AllJavaCode.virus.component.LipidEnvelope;
+import AllJavaCode.virus.component.Envelope;
 
 public class EnvelopedVirus extends Virus {
 
-    public LipidEnvelope envelope;
+    private Envelope envelope;
 
-    public EnvelopedVirus(String name, String acidNucleicType, String capsidShape, String shape, float size, String anchorType) {
-        super(name, acidNucleicType, capsidShape, shape, size);
-        envelope = new LipidEnvelope(anchorType);
+    public EnvelopedVirus(String name, String nucleicAcidType, String capsidShape, String shape, float size, String anchorType) {
+        super(name, nucleicAcidType, capsidShape, shape, size);
+        envelope = new Envelope(anchorType);
     }
 
+    public Envelope getEnvelope() {
+        return envelope;
+    }
+    
     @Override
     public String showInfectionDescription() {
         return "infection in text";
@@ -23,6 +27,6 @@ public class EnvelopedVirus extends Virus {
 
     @Override
     public String getImagePath() {
-        return "image/" + "coronavirus" + ".png";
+        return super.getImagePath() + "EnvelopedViruses/";
     }
 }

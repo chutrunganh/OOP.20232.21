@@ -1,6 +1,8 @@
 package AllJavaCode.virus.component;
 
-public abstract class VirusComponent {
+import AllJavaCode.virus.Displayable;
+
+public abstract class VirusComponent implements Displayable {
 
     private String name;
 
@@ -11,5 +13,15 @@ public abstract class VirusComponent {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String getImagePath() {
+        // blank method as components don't have images
+        return "";
+    }
     
+    @Override
+    public String getDetails() {
+        return "Component: " + name;
+    }
 }
