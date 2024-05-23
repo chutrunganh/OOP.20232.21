@@ -3,11 +3,16 @@ package AllJavaCode.virus;
 public class RotaVirus extends EnvelopedVirus{
 
     public RotaVirus() {
-        super("Rota Virus", "RNA", "Icosahedral", "Spherical", 0.07f, "VP4");
+        super("Rota", "RNA", "Icosahedral", "Spherical", 0.07f, "VP4");
     }
 
     @Override
     public void showInfectionVideo() {
         System.out.println("Rota Virus infection in video");
+    }
+
+    @Override
+    public String getImagePath() {
+        return "image/virus.png";
     }
 }

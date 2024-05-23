@@ -34,20 +34,19 @@ public class HomeController implements Initializable {
     @FXML
     void envelopedVirusClicked(MouseEvent event) {
         model.setType("Enveloped");
-        System.out.println(model.getType());
+        // System.out.println(model.getType());
         switchNextScene(event);
     }
 
     @FXML
     void nonEnvelopedVirusClicked(MouseEvent event) {
         model.setType("Non-Enveloped");
-        System.out.println(model.getType());
+        // System.out.println(model.getType());
         switchNextScene(event);
     }
 
     @FXML
     void helpButtonClicked(MouseEvent event) {
-        // create help scene with home button
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("HelpScene.fxml"));
@@ -58,7 +57,6 @@ public class HomeController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("Help button clicked.");
     }
 
     void switchNextScene(MouseEvent event) {

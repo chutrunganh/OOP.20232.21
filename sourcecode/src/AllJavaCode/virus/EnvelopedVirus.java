@@ -23,6 +23,6 @@ public class EnvelopedVirus extends Virus {
 
     @Override
     public String getImagePath() {
-        return "sourcecode/src/AllJavaCode/gui/image/EnvelopedVirus/" + getName();
+        return "image/" + "coronavirus" + ".png";
     }
 }

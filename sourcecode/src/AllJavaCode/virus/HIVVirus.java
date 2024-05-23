@@ -3,7 +3,7 @@ package AllJavaCode.virus;
 public class HIVVirus extends EnvelopedVirus{
     
     public HIVVirus() {
-        super("HIV Virus", "RNA", "Icosahedral",  "Spherical", 0.1f, "GP120");
+        super("HIV", "RNA", "Icosahedral",  "Spherical", 0.1f, "GP120");
     }
 
     @Override
@@ -11,4 +11,8 @@ public class HIVVirus extends EnvelopedVirus{
         System.out.println("HIV Virus infection in video");
     }
 
+    @Override
+    public String getImagePath() {
+        return "image/hepatitis-b.png";
+    }
 }

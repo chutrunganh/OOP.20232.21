@@ -65,7 +65,7 @@ public class ASpecificVirusController implements Initializable{
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("Help button clicked.");
+        // System.out.println("Help button clicked.");
     }
     
 }

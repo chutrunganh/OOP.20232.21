@@ -18,6 +18,6 @@ public class NonEnvelopedVirus extends Virus {
 
     @Override
     public String getImagePath() {
-        return "sourcecode/src/AllJavaCode/gui/image/NonEnvelopedVirus/" + getName();
+        return "image/" + getName() + ".png";
     }
 }

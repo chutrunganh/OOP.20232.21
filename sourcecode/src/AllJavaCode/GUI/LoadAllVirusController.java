@@ -1,5 +1,6 @@
 package AllJavaCode.gui;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -46,7 +47,21 @@ public class LoadAllVirusController implements Initializable {
             firstVirus = new CoronaVirus();
             secondVirus = new RotaVirus();
             thirdVirus = new HIVVirus();
-            // bind properties of viruses to nodes of scene
+
+            try {
+                image1.setImage(new Image(getClass().getResource(firstVirus.getImagePath()).toURI().toString()));
+                image2.setImage(new Image(getClass().getResource(secondVirus.getImagePath()).toURI().toString()));
+                image3.setImage(new Image(getClass().getResource(thirdVirus.getImagePath()).toURI().toString()));
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            }
+
+            label1.setText(firstVirus.getName());
+            // label1.setLayoutX(150 - label1.getWidth()/2);
+            label2.setText(secondVirus.getName());
+            // label2.setLayoutX(400 - label2.getWidth()/2);
+            label3.setText(thirdVirus.getName());
+            // label3.setLayoutX(550 - label3.getWidth()/2);
         case "Non-Enveloped":
             // add non-enveloped viruses and do similarly to above
             firstVirus = new CoronaVirus();
@@ -83,7 +98,7 @@ public class LoadAllVirusController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("Help button clicked.");
+        // System.out.println("Help button clicked.");
     }
 
     @FXML
@@ -111,7 +126,7 @@ public class LoadAllVirusController implements Initializable {
         // switch to virus demonstration
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("gui/ASpecificVirusUI.fxml"));
+            loader.setLocation(getClass().getResource("ASpecificVirusUI.fxml"));
             loader.setController(new ASpecificVirusController(model));
             
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
