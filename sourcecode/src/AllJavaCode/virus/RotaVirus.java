@@ -7,7 +7,7 @@ public class RotaVirus extends EnvelopedVirus{
     }
 
     @Override
-    public void showInfectionInVideo() {
+    public void showInfectionVideo() {
         System.out.println("Rota Virus infection in video");
     }
 }

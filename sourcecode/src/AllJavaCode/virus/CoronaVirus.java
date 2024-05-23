@@ -7,7 +7,7 @@ public class CoronaVirus extends EnvelopedVirus{
     }
 
     @Override
-    public void showInfectionInVideo() {
+    public void showInfectionVideo() {
         System.out.println("Corona Virus infection in video");
     }
 }

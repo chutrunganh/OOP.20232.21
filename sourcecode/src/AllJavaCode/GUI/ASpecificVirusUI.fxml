@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
@@ -12,22 +10,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" >
+<VBox prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
-      <menus>
-        <Menu mnemonicParsing="false" text="Help">
-          <items>
-            <MenuItem mnemonicParsing="false" text="About us" />
-                  <MenuItem mnemonicParsing="false" text="How to use this app" />
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <ImageView fx:id="homeButton" fitHeight="44.0" fitWidth="45.0" layoutX="14.0" layoutY="315.0" onMouseClicked="#homeButtonClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="homeButton" fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="450.0" onMouseClicked="#homeButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/home-button.png" />
                </image>
@@ -64,6 +53,11 @@
                      </content></Tab>
               </tabs>
             </TabPane>
+            <Button fx:id="helpButton" layoutX="726.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#helpButtonClicked" prefHeight="40.0" prefWidth="64.0" text="Help">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
          </children>
     </AnchorPane>
   </children>

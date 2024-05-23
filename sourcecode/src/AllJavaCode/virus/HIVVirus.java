@@ -7,7 +7,7 @@ public class HIVVirus extends EnvelopedVirus{
     }
 
     @Override
-    public void showInfectionInVideo() {
+    public void showInfectionVideo() {
         System.out.println("HIV Virus infection in video");
     }
 

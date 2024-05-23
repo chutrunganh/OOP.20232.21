@@ -7,12 +7,12 @@ public class NonEnvelopedVirus extends Virus {
     }
 
     @Override
-    public String showInfectionInText() {
+    public String showInfectionDescription() {
         return "infection in text";
     }
 
     @Override
-    public void showInfectionInVideo() {
+    public void showInfectionVideo() {
         System.out.println("Non Enveloped Virus infection in video");
     }
 

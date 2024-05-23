@@ -12,12 +12,12 @@ public class EnvelopedVirus extends Virus {
     }
 
     @Override
-    public String showInfectionInText() {
+    public String showInfectionDescription() {
         return "infection in text";
     }
 
     @Override
-    public void showInfectionInVideo() {
+    public void showInfectionVideo() {
         System.out.println("Enveloped Virus infection in video");
     }
 

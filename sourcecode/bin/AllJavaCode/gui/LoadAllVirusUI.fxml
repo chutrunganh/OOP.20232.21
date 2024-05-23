@@ -8,34 +8,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <ImageView fx:id="image1" fitHeight="134.0" fitWidth="130.0" layoutX="69.0" layoutY="94.0" onMouseClicked="#firstVirusClicked" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="image2" fitHeight="143.0" fitWidth="122.0" layoutX="273.0" layoutY="94.0" onMouseClicked="#secondVirusClicked" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="image3" fitHeight="143.0" fitWidth="122.0" layoutX="454.0" layoutY="94.0" onMouseClicked="#thirdVirusClicked" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="label1" layoutX="100.0" layoutY="236.0">
-               <font>
-                  <Font name="System Bold" size="17.0" />
-               </font>
-            </Label>
-            <Label fx:id="label2" layoutX="312.0" layoutY="236.0">
-               <font>
-                  <Font name="System Bold" size="17.0" />
-               </font>
-            </Label>
-            <Label fx:id="label3" layoutX="498.0" layoutY="236.0">
-               <font>
-                  <Font name="System Bold" size="17.0" />
-               </font>
-            </Label>
-            <ImageView fx:id="homeButton" fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="356.0" onMouseClicked="#homeButtonClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="homeButton" fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="450.0" onMouseClicked="#homeButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/home-button.png" />
                </image>
             </ImageView>
-            <Button fx:id="helpButton" layoutX="54.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#helpButtonClicked" prefHeight="30.0" prefWidth="50.0" text="Help" />
+            <Button fx:id="helpButton" layoutX="726.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#helpButtonClicked" prefHeight="40.0" prefWidth="64.0" text="Help">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Label layoutX="242.5" layoutY="45.0" text="Select a virus for details">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
          </children>
     </AnchorPane>
   </children>

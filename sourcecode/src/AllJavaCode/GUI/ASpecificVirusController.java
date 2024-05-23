@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 //import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -21,6 +22,7 @@ public class ASpecificVirusController implements Initializable{
     @FXML private TextArea taVirusInfo;
     @FXML private ImageView virusImage;
     @FXML private ImageView homeButton;
+    @FXML private Button helpButton;
     @FXML private TextArea taVirusInfectMechanism;
     private DataModel model;
 
