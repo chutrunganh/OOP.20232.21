@@ -38,6 +38,9 @@
                                  <BorderPane.margin>
                                     <Insets left="10.0" top="5.0" />
                                  </BorderPane.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
                               </TextArea>
                            </center>
                         </BorderPane>

@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import AllJavaCode.virus.Displayable;
+import AllJavaCode.virus.EnvelopedVirus;
+import AllJavaCode.virus.Virus;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -34,7 +37,36 @@ public class ASpecificVirusController implements Initializable{
     }
 
     public void initialize(URL locations, ResourceBundle resources) {
-        // bind properties from model
+        Virus selectedVirus = model.getVirus();
+        Displayable virus, capsid, nucleicAcid, envelope;
+        virus = selectedVirus;
+        capsid = selectedVirus.getCapsid();
+        nucleicAcid = selectedVirus.getNucleicAcid();
+        
+        // Initialize image
+        try {
+            virusImage.setImage(new Image(getClass().getResource(virus.getImagePath()).toURI().toString()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Initialize virus details
+        StringBuilder detailsBuilder = new StringBuilder();
+        detailsBuilder.append(virus.getDetails());
+        detailsBuilder.append("\n");
+        detailsBuilder.append(capsid.getDetails());
+        detailsBuilder.append("\n");
+        detailsBuilder.append(nucleicAcid.getDetails());
+        detailsBuilder.append("\n");
+        if (selectedVirus instanceof EnvelopedVirus) {
+            EnvelopedVirus envelopedVirus = (EnvelopedVirus) selectedVirus;
+            envelope = envelopedVirus.getEnvelope();
+            detailsBuilder.append(envelope.getDetails());
+        }
+        taVirusInfo.setText(detailsBuilder.toString());
+
+        // Initialize infection description
+        
     }
 
     @FXML
