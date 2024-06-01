@@ -47,7 +47,7 @@ public class LoadAllVirusController implements Initializable {
         case "Non-Enveloped":
             // add non-enveloped viruses and do similarly to above
             // firstVirus = new CoronaVirus();
-            secondVirus = new RotaVirus();
+            // secondVirus = new RotaVirus();
             // thirdVirus = new HIVVirus();
         }
 
