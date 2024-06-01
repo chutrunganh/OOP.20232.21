@@ -39,6 +39,7 @@ public class ASpecificVirusController implements Initializable{
         this.model = model;
     }
 
+    @Override
     public void initialize(URL locations, ResourceBundle resources) {
         Virus selectedVirus = model.getVirus();
         String selectedType = model.getType();
