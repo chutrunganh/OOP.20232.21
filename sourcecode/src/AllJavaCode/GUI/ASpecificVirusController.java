@@ -1,46 +1,69 @@
-package AllJavaCode.GUI;
+package AllJavaCode.gui;
 
-import AllJavaCode.Main;
-import AllJavaCode.Structure.SpecificVirus.EnvelopedVirus.CoronaVirus;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+//import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class ASpecificVirusController {
+public class ASpecificVirusController implements Initializable{
+
+    @FXML private TextArea taVirusInfo;
+    @FXML private ImageView virusImage;
+    @FXML private ImageView homeButton;
+    @FXML private TextArea taVirusInfectMechanism;
+    private DataModel model;
+
+    public ASpecificVirusController() {
+        this.model = new DataModel();
+    }
+    public ASpecificVirusController(DataModel model) {
+        this.model = model;
+    }
+
+    public void initialize(URL locations, ResourceBundle resources) {
+        // bind properties from model
+    }
 
     @FXML
-    private TextArea taVirusInfo;
-    @FXML
-    private ImageView virusImage;
-    @FXML
-    private TextArea taVirusInfectMechanism;
+    void homeButtonClicked(MouseEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("HomeUI.fxml"));
+            loader.setController(new HomeController(model));
 
-    public void initialize() {
-       //Initiate base on the Virus chosen
-        if (LoadAllVirusController.chosenVirus.equals("Corona")) {
-            CoronaVirus coronaVirus = new CoronaVirus();
-            taVirusInfo.setText(coronaVirus.toString());
-            virusImage.setImage(new Image(coronaVirus.getImage()));
-            taVirusInfectMechanism.setText(coronaVirus.showInfectionInText());
-        }
-        else if (LoadAllVirusController.chosenVirus.equals("HIV")) {
-            System.out.println("HIV Virus Chosen");
-        }
-        else if (LoadAllVirusController.chosenVirus.equals("Rota")) {
-            System.out.println("Rota Virus Chosen");
-
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     @FXML
-    void backToHomeClicked(MouseEvent event) {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(Main.homeScene);
-    }
+    void helpButtonClicked(MouseEvent event) {
+        // create help scene with home button
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("HelpScene.fxml"));
 
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("Help button clicked.");
+    }
+    
 }

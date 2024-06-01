@@ -1,11 +1,7 @@
-package AllJavaCode.Structure.AbstractVirus;
+package AllJavaCode.virus;
 
-public interface Infecting {
-
+public interface Infectable {
     //Show infection method in text and video
     public String showInfectionInText();
-
     public void showInfectionInVideo();
-
-
 }
