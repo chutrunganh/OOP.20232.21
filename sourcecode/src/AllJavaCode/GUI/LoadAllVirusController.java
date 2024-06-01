@@ -8,7 +8,6 @@ import AllJavaCode.virus.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -26,8 +25,6 @@ public class LoadAllVirusController implements Initializable {
     @FXML private Label label1;
     @FXML private Label label2;
     @FXML private Label label3;
-    @FXML private ImageView homeButton;
-    @FXML private Button helpButton;
 
     private DataModel model;
     private Virus firstVirus, secondVirus, thirdVirus;
@@ -73,7 +70,7 @@ public class LoadAllVirusController implements Initializable {
     void homeButtonClicked(MouseEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("HomeUI.fxml"));
+            loader.setLocation(getClass().getResource("HomeScene.fxml"));
             loader.setController(new HomeController(model));
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -86,10 +83,10 @@ public class LoadAllVirusController implements Initializable {
 
     @FXML
     void helpButtonClicked(MouseEvent event) {
-        // create help scene with home button
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("HelpScene.fxml"));
+            loader.setController(new HelpController(model));
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(loader.load()));
@@ -97,7 +94,6 @@ public class LoadAllVirusController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        // System.out.println("Help button clicked.");
     }
 
     @FXML

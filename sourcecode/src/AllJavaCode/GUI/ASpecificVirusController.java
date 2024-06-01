@@ -12,7 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+//import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 //import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -24,8 +24,6 @@ public class ASpecificVirusController implements Initializable{
 
     @FXML private TextArea taVirusInfo;
     @FXML private ImageView virusImage;
-    @FXML private ImageView homeButton;
-    @FXML private Button helpButton;
     @FXML private TextArea taVirusInfectMechanism;
     private DataModel model;
 
@@ -73,7 +71,7 @@ public class ASpecificVirusController implements Initializable{
     void homeButtonClicked(MouseEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("HomeUI.fxml"));
+            loader.setLocation(getClass().getResource("HomeScene.fxml"));
             loader.setController(new HomeController(model));
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -90,6 +88,7 @@ public class ASpecificVirusController implements Initializable{
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("HelpScene.fxml"));
+            loader.setController(new HelpController(model));
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(loader.load()));
