@@ -1,14 +1,14 @@
 package AllJavaCode.virus;
 
-public class HepatitisB extends EnvelopedVirus{
+public class HepatitisBVirus extends EnvelopedVirus{
 
-    public HepatitisB() {
+    public HepatitisBVirus() {
         super("Hepatitis B", "DNA", "Icosahedral", "Spherical", 0.042f, "GP41");
     }
 
     @Override
     public String getInfectionVideoPath() {
-        return super.getInfectionVideoPath() + getName();
+        return super.getInfectionVideoPath() + getName() + ".mp4";
     }
 
     @Override

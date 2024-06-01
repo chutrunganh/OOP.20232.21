@@ -32,14 +32,12 @@ public class HomeController implements Initializable {
     @FXML
     void envelopedVirusClicked(MouseEvent event) {
         model.setType("Enveloped");
-        // System.out.println(model.getType());
         switchNextScene(event);
     }
 
     @FXML
     void nonEnvelopedVirusClicked(MouseEvent event) {
         model.setType("Non-Enveloped");
-        // System.out.println(model.getType());
         switchNextScene(event);
     }
 

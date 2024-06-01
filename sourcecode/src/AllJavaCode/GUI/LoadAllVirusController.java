@@ -42,12 +42,12 @@ public class LoadAllVirusController implements Initializable {
         switch (model.getType()) {
         case "Enveloped":
             firstVirus = new CoronaVirus();
-            secondVirus = new RotaVirus();
+            secondVirus = new HepatitisBVirus();
             thirdVirus = new HIVVirus();
         case "Non-Enveloped":
             // add non-enveloped viruses and do similarly to above
             // firstVirus = new CoronaVirus();
-            // secondVirus = new RotaVirus();
+            secondVirus = new RotaVirus();
             // thirdVirus = new HIVVirus();
         }
 
@@ -98,21 +98,18 @@ public class LoadAllVirusController implements Initializable {
 
     @FXML
     void firstVirusClicked(MouseEvent event) {
-        //System.out.println(firstVirus.getName() + " Clicked");
         model.setVirus(firstVirus);
         switchNextScene(event);
     }
 
     @FXML
     void secondVirusClicked(MouseEvent event) {
-        //System.out.println(secondVirus.getName() + " Clicked");
         model.setVirus(secondVirus);
         switchNextScene(event);
     }
 
     @FXML
     void thirdVirusClicked(MouseEvent event) {
-        //System.out.println(thirdVirus.getName() + " Clicked");
         model.setVirus(thirdVirus);
         switchNextScene(event);
     }

@@ -17,14 +17,19 @@ import javafx.scene.control.TextArea;
 //import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class ASpecificVirusController implements Initializable{
 
     @FXML private TextArea virusDetails;
     @FXML private ImageView virusImage;
-    @FXML private TextArea taVirusInfectMechanism;
+    @FXML private TextArea infectionDetails;
+    @FXML private MediaView infectionVideo;
     private DataModel model;
 
     public ASpecificVirusController() {
@@ -64,9 +69,18 @@ public class ASpecificVirusController implements Initializable{
             detailsBuilder.append(envelope.getDetails());
         }
         virusDetails.setText(detailsBuilder.toString());
+        virusDetails.setEditable(false);
 
         // Initialize infection description
+        infectionDetails.setText(selectedVirus.getInfectionDescription());
+        infectionDetails.setEditable(false);
         
+        try {
+            Media video = new Media(getClass().getResource(selectedVirus.getInfectionVideoPath()).toURI().toString());
+            infectionVideo.setMediaPlayer(new MediaPlayer(video));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -98,7 +112,24 @@ public class ASpecificVirusController implements Initializable{
         } catch (Exception e) {
             e.printStackTrace();
         }
-        // System.out.println("Help button clicked.");
     }
     
+    @FXML
+    void playButtonClicked(MouseEvent event) {
+        infectionVideo.getMediaPlayer().play();
+    }
+
+    @FXML
+    void pauseButtonClicked(MouseEvent event) {
+        infectionVideo.getMediaPlayer().pause();
+    }
+
+    @FXML
+    void replayButtonClicked(MouseEvent event) {
+        MediaPlayer mediaPlayer = infectionVideo.getMediaPlayer();
+        if (mediaPlayer.getStatus() != MediaPlayer.Status.READY) {
+            mediaPlayer.seek(Duration.seconds(0.0));
+            mediaPlayer.play();
+        }
+    }
 }

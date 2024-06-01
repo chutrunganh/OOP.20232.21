@@ -12,9 +12,9 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <ImageView fx:id="image1" fitHeight="200.0" fitWidth="200.0" layoutX="50.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="image2" fitHeight="200.0" fitWidth="200.0" layoutX="300.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="image3" fitHeight="200.0" fitWidth="200.0" layoutX="550.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image1" fitHeight="200.0" fitWidth="200.0" layoutX="50.0" layoutY="134.0" onMouseClicked="#firstVirusClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image2" fitHeight="200.0" fitWidth="200.0" layoutX="300.0" layoutY="134.0" onMouseClicked="#secondVirusClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image3" fitHeight="200.0" fitWidth="200.0" layoutX="550.0" layoutY="134.0" onMouseClicked="#thirdVirusClicked" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="450.0" onMouseClicked="#homeButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/home-button.png" />
@@ -29,17 +29,17 @@
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label fx:id="label1" alignment="CENTER" layoutX="113.0" layoutY="364.0" textAlignment="CENTER" AnchorPane.bottomAnchor="107.0" AnchorPane.topAnchor="364.0">
+            <Label fx:id="label1" alignment="CENTER" layoutX="75.0" layoutY="364.0" textAlignment="CENTER">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label2" layoutX="363.0" layoutY="364.0">
+            <Label fx:id="label2" layoutX="325.0" layoutY="364.0">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label3" layoutX="613.0" layoutY="364.0">
+            <Label fx:id="label3" layoutX="575.0" layoutY="364.0">
                <font>
                   <Font size="24.0" />
                </font>

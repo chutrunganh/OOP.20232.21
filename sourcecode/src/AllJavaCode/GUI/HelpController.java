@@ -9,12 +9,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class HelpController implements Initializable {
 
     private DataModel model;
+    @FXML TextArea taDetails;
 
     public HelpController() {
         this.model = new DataModel();
@@ -25,7 +27,9 @@ public class HelpController implements Initializable {
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {}
+    public void initialize(URL location, ResourceBundle resources) {
+        taDetails.setEditable(false);
+    }
 
     @FXML
     void homeButtonClicked(MouseEvent event) {

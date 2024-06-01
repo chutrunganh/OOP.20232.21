@@ -8,7 +8,7 @@ public class RotaVirus extends NonEnvelopedVirus{
 
     @Override
     public String getInfectionVideoPath() {
-        return super.getInfectionVideoPath() + getName();
+        return super.getInfectionVideoPath() + getName() + ".mp4";
     }
 
     @Override

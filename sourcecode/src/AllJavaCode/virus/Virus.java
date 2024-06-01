@@ -48,6 +48,7 @@ public abstract class Virus implements Infectable, Displayable {
         sb.append(shape);
         sb.append("\nSize: ");
         sb.append(size); // + length unit
+        sb.append(" micrometers");
         return sb.toString();
     }
     @Override
