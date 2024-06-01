@@ -40,7 +40,8 @@
             <Button fx:id="helpButton" layoutX="726.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#helpButtonClicked" prefHeight="40.0" prefWidth="64.0" text="Help">
                <font>
                   <Font size="16.0" />
-               </font></Button>
+               </font>
+            </Button>
             <Label layoutX="108.0" layoutY="45.0" text="Virus Structure and Infection Demonstration">
                <font>
                   <Font size="32.0" />
