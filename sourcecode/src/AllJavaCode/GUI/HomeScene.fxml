@@ -37,7 +37,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="helpButton" layoutX="726.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#helpButtonClicked" prefHeight="40.0" prefWidth="64.0" text="Help">
+            <Button layoutX="726.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#helpButtonClicked" prefHeight="40.0" prefWidth="64.0" text="Help">
                <font>
                   <Font size="16.0" />
                </font>

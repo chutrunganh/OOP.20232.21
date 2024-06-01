@@ -1,14 +1,14 @@
 package AllJavaCode.virus;
 
-public class RotaVirus extends EnvelopedVirus{
+public class RotaVirus extends NonEnvelopedVirus{
 
     public RotaVirus() {
-        super("Rota", "RNA", "Icosahedral", "Spherical", 0.07f, "VP4");
+        super("Rota", "RNA", "Icosahedral", "Spherical", 0.07f);
     }
 
     @Override
-    public void showInfectionVideo() {
-        System.out.println("Rota Virus infection in video");
+    public String getInfectionVideoPath() {
+        return super.getInfectionVideoPath() + getName();
     }
 
     @Override

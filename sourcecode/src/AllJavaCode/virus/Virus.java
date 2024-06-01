@@ -54,4 +54,9 @@ public abstract class Virus implements Infectable, Displayable {
     public String getImagePath() {
         return "image/";
     }
+
+    @Override
+    public String getInfectionVideoPath() {
+        return "video/";
+    }
 }

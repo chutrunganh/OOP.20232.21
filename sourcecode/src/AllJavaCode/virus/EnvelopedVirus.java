@@ -16,13 +16,13 @@ public class EnvelopedVirus extends Virus {
     }
     
     @Override
-    public String showInfectionDescription() {
+    public String getInfectionDescription() {
         return "infection in text";
     }
 
     @Override
-    public void showInfectionVideo() {
-        System.out.println("Enveloped Virus infection in video");
+    public String getInfectionVideoPath() {
+        return super.getInfectionVideoPath() + "EnvelopedViruses/";
     }
 
     @Override

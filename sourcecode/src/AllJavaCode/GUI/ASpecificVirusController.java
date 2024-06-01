@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 
 public class ASpecificVirusController implements Initializable{
 
-    @FXML private TextArea taVirusInfo;
+    @FXML private TextArea virusDetails;
     @FXML private ImageView virusImage;
     @FXML private TextArea taVirusInfectMechanism;
     private DataModel model;
@@ -36,11 +36,13 @@ public class ASpecificVirusController implements Initializable{
 
     public void initialize(URL locations, ResourceBundle resources) {
         Virus selectedVirus = model.getVirus();
-        Displayable virus, capsid, nucleicAcid, envelope;
+        String selectedType = model.getType();
+
+        Displayable virus, capsid, nucleicAcid;
         virus = selectedVirus;
         capsid = selectedVirus.getCapsid();
         nucleicAcid = selectedVirus.getNucleicAcid();
-        
+
         // Initialize image
         try {
             virusImage.setImage(new Image(getClass().getResource(virus.getImagePath()).toURI().toString()));
@@ -56,12 +58,12 @@ public class ASpecificVirusController implements Initializable{
         detailsBuilder.append("\n");
         detailsBuilder.append(nucleicAcid.getDetails());
         detailsBuilder.append("\n");
-        if (selectedVirus instanceof EnvelopedVirus) {
+        if (selectedType.equals("Enveloped")) {
             EnvelopedVirus envelopedVirus = (EnvelopedVirus) selectedVirus;
-            envelope = envelopedVirus.getEnvelope();
+            Displayable envelope = envelopedVirus.getEnvelope();
             detailsBuilder.append(envelope.getDetails());
         }
-        taVirusInfo.setText(detailsBuilder.toString());
+        virusDetails.setText(detailsBuilder.toString());
 
         // Initialize infection description
         
