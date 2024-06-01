@@ -13,6 +13,6 @@ public class RotaVirus extends EnvelopedVirus{
 
     @Override
     public String getImagePath() {
-        return super.getImagePath() + getName();
+        return super.getImagePath() + getName() + ".png";
     }
 }

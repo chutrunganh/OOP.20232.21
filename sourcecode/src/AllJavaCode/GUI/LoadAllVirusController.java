@@ -47,27 +47,26 @@ public class LoadAllVirusController implements Initializable {
             firstVirus = new CoronaVirus();
             secondVirus = new RotaVirus();
             thirdVirus = new HIVVirus();
-
-            try {
-                image1.setImage(new Image(getClass().getResource(firstVirus.getImagePath()).toURI().toString()));
-                image2.setImage(new Image(getClass().getResource(secondVirus.getImagePath()).toURI().toString()));
-                image3.setImage(new Image(getClass().getResource(thirdVirus.getImagePath()).toURI().toString()));
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-            }
-
-            label1.setText(firstVirus.getName());
-            // label1.setLayoutX(150 - label1.getWidth()/2);
-            label2.setText(secondVirus.getName());
-            // label2.setLayoutX(400 - label2.getWidth()/2);
-            label3.setText(thirdVirus.getName());
-            // label3.setLayoutX(550 - label3.getWidth()/2);
         case "Non-Enveloped":
             // add non-enveloped viruses and do similarly to above
-            firstVirus = new CoronaVirus();
-            secondVirus = new RotaVirus();
-            thirdVirus = new HIVVirus();
+            // firstVirus = new CoronaVirus();
+            // secondVirus = new RotaVirus();
+            // thirdVirus = new HIVVirus();
         }
+
+        try {
+            image1.setImage(new Image(getClass().getResource(firstVirus.getImagePath()).toURI().toString()));
+            image2.setImage(new Image(getClass().getResource(secondVirus.getImagePath()).toURI().toString()));
+            image3.setImage(new Image(getClass().getResource(thirdVirus.getImagePath()).toURI().toString()));
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        label1.setText(firstVirus.getName());
+        // label1.setLayoutX(150 - label1.getWidth()/2);
+        label2.setText(secondVirus.getName());
+        // label2.setLayoutX(400 - label2.getWidth()/2);
+        label3.setText(thirdVirus.getName());
+        // label3.setLayoutX(550 - label3.getWidth()/2);
     }
 
     @FXML
