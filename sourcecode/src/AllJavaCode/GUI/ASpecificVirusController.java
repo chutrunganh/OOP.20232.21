@@ -1,48 +1,40 @@
 package AllJavaCode.gui;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import AllJavaCode.virus.Displayable;
 import AllJavaCode.virus.EnvelopedVirus;
 import AllJavaCode.virus.Virus;
+
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-//import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-//import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class ASpecificVirusController implements Initializable{
+public class ASpecificVirusController extends BaseController {
 
     @FXML private TextArea virusDetails;
     @FXML private ImageView virusImage;
     @FXML private TextArea infectionDetails;
     @FXML private MediaView infectionVideo;
-    private DataModel model;
 
     public ASpecificVirusController() {
-        this.model = new DataModel();
+        super();
     }
     public ASpecificVirusController(DataModel model) {
-        this.model = model;
+        super(model);
     }
 
     @Override
     public void initialize(URL locations, ResourceBundle resources) {
-        Virus selectedVirus = model.getVirus();
-        String selectedType = model.getType();
+        Virus selectedVirus = getDataModel().getVirus();
+        String selectedType = getDataModel().getType();
 
         Displayable virus, capsid, nucleicAcid;
         virus = selectedVirus;
@@ -72,44 +64,13 @@ public class ASpecificVirusController implements Initializable{
         virusDetails.setText(detailsBuilder.toString());
         virusDetails.setEditable(false);
 
-        // Initialize infection description
+        // Initialize infection description and video
         infectionDetails.setText(selectedVirus.getInfectionDescription());
         infectionDetails.setEditable(false);
         
         try {
             Media video = new Media(getClass().getResource(selectedVirus.getInfectionVideoPath()).toURI().toString());
             infectionVideo.setMediaPlayer(new MediaPlayer(video));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    void homeButtonClicked(MouseEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("HomeScene.fxml"));
-            loader.setController(new HomeController(model));
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(loader.load()));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    void helpButtonClicked(MouseEvent event) {
-        // create help scene with home button
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("HelpScene.fxml"));
-            loader.setController(new HelpController(model));
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(loader.load()));
-            stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }

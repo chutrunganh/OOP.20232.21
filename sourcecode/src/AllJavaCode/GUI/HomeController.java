@@ -6,21 +6,18 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
-public class HomeController implements Initializable {
-
-    private DataModel model;
+public class HomeController extends BaseController {
 
     public HomeController() {
-        this.model = new DataModel();
+        super();
     }
     public HomeController(DataModel model) {
-        this.model = model;
+        super(model);
     }
 
     @Override
@@ -28,29 +25,14 @@ public class HomeController implements Initializable {
 
     @FXML
     void envelopedVirusClicked(MouseEvent event) {
-        model.setType("Enveloped");
+        getDataModel().setType("Enveloped");
         switchNextScene(event);
     }
 
     @FXML
     void nonEnvelopedVirusClicked(MouseEvent event) {
-        model.setType("Non-Enveloped");
+        getDataModel().setType("Non-Enveloped");
         switchNextScene(event);
-    }
-
-    @FXML
-    void helpButtonClicked(MouseEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("HelpScene.fxml"));
-            loader.setController(new HelpController(model));
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(loader.load()));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     void switchNextScene(MouseEvent event) {
@@ -58,7 +40,7 @@ public class HomeController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("LoadAllVirusUI.fxml"));
-            loader.setController(new LoadAllVirusController(model));
+            loader.setController(new LoadAllVirusController(getDataModel()));
             
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(loader.load()));
