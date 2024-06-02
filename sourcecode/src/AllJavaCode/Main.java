@@ -1,7 +1,7 @@
 package AllJavaCode;
 
-import AllJavaCode.gui.DataModel;
-import AllJavaCode.gui.HomeController;
+import AllJavaCode.GUI.DataModel;
+import AllJavaCode.GUI.HomeController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,7 +18,7 @@ public class Main extends Application {
 
             // Procedure for loading a new scene and setting a customized FXML Controller
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("gui/HomeScene.fxml"));
+            loader.setLocation(getClass().getResource("GUI/HomeScene.fxml"));
             loader.setController(new HomeController(new DataModel()));
 
             primaryStage.setResizable(false);
