@@ -43,10 +43,12 @@ public class VirusSelectionController extends BaseController {
             firstVirus = new CoronaVirus();
             secondVirus = new HepatitisBVirus();
             thirdVirus = new HIVVirus();
+            break;
         case "Non-Enveloped":
-            // firstVirus = new CoronaVirus();
-            // secondVirus = new RotaVirus();
-            // thirdVirus = new HIVVirus();
+            firstVirus = new RhinoVirus();
+            secondVirus = new RotaVirus();
+            thirdVirus = new PolioVirus();
+            break;
         }
 
         // Set virus images

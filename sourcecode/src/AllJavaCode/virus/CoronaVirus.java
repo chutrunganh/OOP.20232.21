@@ -3,7 +3,7 @@ package AllJavaCode.virus;
 public class CoronaVirus extends EnvelopedVirus{
 
     public CoronaVirus() {
-        super("Corona", "RNA", "Helical", "Spherical", 0.1f, "GP120");
+        super("Coronavirus", "RNA", "Helical", "Spherical", 0.12f, "GP120 with spikes");
     }
 
     @Override
