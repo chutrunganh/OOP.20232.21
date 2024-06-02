@@ -71,8 +71,8 @@ public class VirusDisplayController extends BaseController {
         infectionDetails.setEditable(false);
         
         try {
-            Media video = new Media(getClass().getResource(infectingVirus.getInfectionVideoPath()).toURI().toString());
-            infectionVideo.setMediaPlayer(new MediaPlayer(video));
+            Media media = new Media(getClass().getResource(infectingVirus.getInfectionVideoPath()).toURI().toString());
+            infectionVideo.setMediaPlayer(new MediaPlayer(media));
         } catch (Exception e) {
             e.printStackTrace();
         }

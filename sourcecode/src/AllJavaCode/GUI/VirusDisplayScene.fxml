@@ -52,7 +52,7 @@
                         <AnchorPane prefHeight="318.0" prefWidth="635.0">
                            <children>
                               <TextArea fx:id="infectionDetails" layoutX="14.0" prefHeight="59.0" prefWidth="771.0" />
-                              <MediaView fitHeight="300.0" fitWidth="400.0" layoutX="162.0" layoutY="79.0" />
+                              <MediaView fx:id="infectionVideo" fitHeight="300.0" fitWidth="400.0" layoutX="162.0" layoutY="79.0" />
                               <Button layoutX="679.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#playButtonClicked" prefHeight="40.0" prefWidth="64.0" text="Play">
                                  <font>
                                     <Font size="14.0" />
