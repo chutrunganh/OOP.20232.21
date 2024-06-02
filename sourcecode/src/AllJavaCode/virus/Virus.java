@@ -1,19 +1,19 @@
 package AllJavaCode.virus;
 
-import AllJavaCode.virus.component.AcidNucleic;
+import AllJavaCode.virus.component.NucleicAcid;
 import AllJavaCode.virus.component.Capsid;
 
-public abstract class Virus implements Infectable {
+public abstract class Virus implements Infectable, Displayable {
 
     private String name;
-    private AcidNucleic acidNucleic;
+    private NucleicAcid nucleicAcid;
     private Capsid capsid;
     private String shape; // linear, circular, segmented
     private float size;
     
-    public Virus(String name, String acidNucleicType, String capsidShape, String shape, float size) {
+    public Virus(String name, String nucleicAcidType, String capsidShape, String shape, float size) {
         this.name = name;
-        this.acidNucleic = new AcidNucleic(acidNucleicType);
+        this.nucleicAcid = new NucleicAcid(nucleicAcidType);
         this.capsid = new Capsid(capsidShape);
         this.shape = shape;
         this.size = size;
@@ -31,13 +31,33 @@ public abstract class Virus implements Infectable {
         return size;
     }
 
-    public String getAcidNucleic() {
-        return acidNucleic.toString();
+    public NucleicAcid getNucleicAcid() {
+        return nucleicAcid;
     }
 
-    public String getCapsid() {
-        return capsid.toString();
+    public Capsid getCapsid() {
+        return capsid;
     }
 
-    public abstract String getImagePath();
+    @Override
+    public String getDetails() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Virus name: ");
+        sb.append(name);
+        sb.append("\nShape: ");
+        sb.append(shape);
+        sb.append("\nSize: ");
+        sb.append(size); // + length unit
+        sb.append(" micrometers");
+        return sb.toString();
+    }
+    @Override
+    public String getImagePath() {
+        return "image/";
+    }
+
+    @Override
+    public String getInfectionVideoPath() {
+        return "video/";
+    }
 }

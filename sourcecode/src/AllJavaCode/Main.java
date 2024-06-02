@@ -18,7 +18,7 @@ public class Main extends Application {
 
             // Procedure for loading a new scene and setting a customized FXML Controller
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("gui/HomeUI.fxml"));
+            loader.setLocation(getClass().getResource("gui/HomeScene.fxml"));
             loader.setController(new HomeController(new DataModel()));
 
             primaryStage.setResizable(false);
