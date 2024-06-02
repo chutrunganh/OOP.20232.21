@@ -3,7 +3,7 @@ package AllJavaCode.virus;
 public class RotaVirus extends NonEnvelopedVirus{
 
     public RotaVirus() {
-        super("Rota", "RNA", "Icosahedral", "Spherical", 0.07f);
+        super("Rotavirus", "RNA", "Icosahedral", "Spherical", 0.07f);
     }
 
     @Override
