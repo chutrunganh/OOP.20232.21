@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import AllJavaCode.virus.Displayable;
 import AllJavaCode.virus.EnvelopedVirus;
+import AllJavaCode.virus.Infectable;
 import AllJavaCode.virus.Virus;
 
 import javafx.fxml.FXML;
@@ -65,11 +66,12 @@ public class VirusDisplayController extends BaseController {
         virusDetails.setEditable(false);
 
         // Initialize infection description and video
-        infectionDetails.setText(selectedVirus.getInfectionDescription());
+        Infectable infectingVirus = selectedVirus;
+        infectionDetails.setText(infectingVirus.getInfectionDescription());
         infectionDetails.setEditable(false);
         
         try {
-            Media video = new Media(getClass().getResource(selectedVirus.getInfectionVideoPath()).toURI().toString());
+            Media video = new Media(getClass().getResource(infectingVirus.getInfectionVideoPath()).toURI().toString());
             infectionVideo.setMediaPlayer(new MediaPlayer(video));
         } catch (Exception e) {
             e.printStackTrace();
