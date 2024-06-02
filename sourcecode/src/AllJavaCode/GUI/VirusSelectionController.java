@@ -16,7 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 
 
-public class LoadAllVirusController extends BaseController {
+public class VirusSelectionController extends BaseController {
 
     @FXML private ImageView image1;
     @FXML private ImageView image2;
@@ -27,10 +27,10 @@ public class LoadAllVirusController extends BaseController {
 
     private Virus firstVirus, secondVirus, thirdVirus;
 
-    public LoadAllVirusController() {
+    public VirusSelectionController() {
         super();
     }
-    public LoadAllVirusController(DataModel model) {
+    public VirusSelectionController(DataModel model) {
         super(model);
     }
 
@@ -86,8 +86,8 @@ public class LoadAllVirusController extends BaseController {
         // switch to virus demonstration
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("ASpecificVirusUI.fxml"));
-            loader.setController(new ASpecificVirusController(getDataModel()));
+            loader.setLocation(getClass().getResource("VirusDisplayScene.fxml"));
+            loader.setController(new VirusDisplayController(getDataModel()));
             
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(loader.load()));

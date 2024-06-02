@@ -17,17 +17,17 @@ import javafx.scene.media.MediaView;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
-public class ASpecificVirusController extends BaseController {
+public class VirusDisplayController extends BaseController {
 
     @FXML private TextArea virusDetails;
     @FXML private ImageView virusImage;
     @FXML private TextArea infectionDetails;
     @FXML private MediaView infectionVideo;
 
-    public ASpecificVirusController() {
+    public VirusDisplayController() {
         super();
     }
-    public ASpecificVirusController(DataModel model) {
+    public VirusDisplayController(DataModel model) {
         super(model);
     }
 
