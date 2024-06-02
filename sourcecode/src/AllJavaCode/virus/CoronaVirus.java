@@ -3,11 +3,17 @@ package AllJavaCode.virus;
 public class CoronaVirus extends EnvelopedVirus{
 
     public CoronaVirus() {
-        super("Corona Virus", "RNA", "Helical", "Spherical", 0.1f, "Spike Glycoprotein");
+        super("Coronavirus", "RNA", "Helical", "Spherical", 0.12f, "GP120 with spikes");
     }
 
     @Override
-    public void showInfectionInVideo() {
-        System.out.println("Corona Virus infection in video");
+    public String getInfectionVideoPath() {
+        return super.getInfectionVideoPath() + getName() + ".mp4";
     }
+
+    @Override
+    public String getImagePath() {
+        return super.getImagePath() + getName() + ".png";
+    }
+
 }

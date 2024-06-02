@@ -2,22 +2,22 @@ package AllJavaCode.virus;
 
 public class NonEnvelopedVirus extends Virus {
     
-    public NonEnvelopedVirus(String name, String acidNucleicType, String capsidShape, String shape, float size) {
-        super(name, acidNucleicType, capsidShape, shape, size);
+    public NonEnvelopedVirus(String name, String nucleicAcidType, String capsidShape, String shape, float size) {
+        super(name, nucleicAcidType, capsidShape, shape, size);
     }
 
     @Override
-    public String showInfectionInText() {
+    public String getInfectionDescription() {
         return "infection in text";
     }
 
     @Override
-    public void showInfectionInVideo() {
-        System.out.println("Non Enveloped Virus infection in video");
+    public String getInfectionVideoPath() {
+        return super.getInfectionVideoPath() + "NonEnvelopedViruses/";
     }
 
     @Override
     public String getImagePath() {
-        return "sourcecode/src/AllJavaCode/gui/image/NonEnvelopedVirus/" + getName();
+        return super.getImagePath() + "NonEnvelopedViruses/";
     }
 }

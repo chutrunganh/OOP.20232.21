@@ -1,28 +1,32 @@
 package AllJavaCode.virus;
 
-import AllJavaCode.virus.component.LipidEnvelope;
+import AllJavaCode.virus.component.Envelope;
 
 public class EnvelopedVirus extends Virus {
 
-    public LipidEnvelope envelope;
+    private Envelope envelope;
 
-    public EnvelopedVirus(String name, String acidNucleicType, String capsidShape, String shape, float size, String anchorType) {
-        super(name, acidNucleicType, capsidShape, shape, size);
-        envelope = new LipidEnvelope(anchorType);
+    public EnvelopedVirus(String name, String nucleicAcidType, String capsidShape, String shape, float size, String anchorType) {
+        super(name, nucleicAcidType, capsidShape, shape, size);
+        envelope = new Envelope(anchorType);
     }
 
+    public Envelope getEnvelope() {
+        return envelope;
+    }
+    
     @Override
-    public String showInfectionInText() {
+    public String getInfectionDescription() {
         return "infection in text";
     }
 
     @Override
-    public void showInfectionInVideo() {
-        System.out.println("Enveloped Virus infection in video");
+    public String getInfectionVideoPath() {
+        return super.getInfectionVideoPath() + "EnvelopedViruses/";
     }
 
     @Override
     public String getImagePath() {
-        return "sourcecode/src/AllJavaCode/gui/image/EnvelopedVirus/" + getName();
+        return super.getImagePath() + "EnvelopedViruses/";
     }
 }
