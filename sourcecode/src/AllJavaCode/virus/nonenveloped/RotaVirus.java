@@ -1,9 +1,9 @@
-package AllJavaCode.virus;
+package AllJavaCode.virus.nonenveloped;
 
-public class RhinoVirus extends NonEnvelopedVirus {
+public class RotaVirus extends NonEnvelopedVirus{
 
-    public RhinoVirus() {
-        super("Rhinovirus", "RNA", "Icosahedral", "Spherical", 0.03f);
+    public RotaVirus() {
+        super("Rotavirus", "RNA", "Icosahedral", "Spherical", 0.07f);
     }
 
     @Override

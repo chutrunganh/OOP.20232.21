@@ -1,9 +1,9 @@
-package AllJavaCode.virus;
+package AllJavaCode.virus.enveloped;
 
-public class HIVVirus extends EnvelopedVirus{
-    
-    public HIVVirus() {
-        super("HIV", "RNA", "Icosahedral",  "Spherical", 0.1f, "GP120");
+public class CoronaVirus extends EnvelopedVirus{
+
+    public CoronaVirus() {
+        super("Coronavirus", "RNA", "Helical", "Spherical", 0.12f, "GP120 with spikes");
     }
 
     @Override
@@ -15,4 +15,5 @@ public class HIVVirus extends EnvelopedVirus{
     public String getImagePath() {
         return super.getImagePath() + getName() + ".png";
     }
+
 }

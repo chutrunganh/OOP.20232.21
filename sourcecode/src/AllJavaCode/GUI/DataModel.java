@@ -1,7 +1,7 @@
 package AllJavaCode.gui;
 
-import AllJavaCode.virus.EnvelopedVirus;
 import AllJavaCode.virus.Virus;
+import AllJavaCode.virus.enveloped.EnvelopedVirus;
 
 public class DataModel {
 

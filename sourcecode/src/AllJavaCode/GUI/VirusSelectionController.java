@@ -5,6 +5,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import AllJavaCode.virus.*;
+import AllJavaCode.virus.enveloped.CoronaVirus;
+import AllJavaCode.virus.enveloped.HIVVirus;
+import AllJavaCode.virus.enveloped.HepatitisBVirus;
+import AllJavaCode.virus.nonenveloped.PolioVirus;
+import AllJavaCode.virus.nonenveloped.RhinoVirus;
+import AllJavaCode.virus.nonenveloped.RotaVirus;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;

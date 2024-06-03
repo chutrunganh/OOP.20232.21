@@ -1,5 +1,6 @@
-package AllJavaCode.virus;
+package AllJavaCode.virus.enveloped;
 
+import AllJavaCode.virus.Virus;
 import AllJavaCode.virus.component.Envelope;
 
 public class EnvelopedVirus extends Virus {

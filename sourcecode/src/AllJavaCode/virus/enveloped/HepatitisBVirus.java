@@ -1,9 +1,9 @@
-package AllJavaCode.virus;
+package AllJavaCode.virus.enveloped;
 
-public class RotaVirus extends NonEnvelopedVirus{
+public class HepatitisBVirus extends EnvelopedVirus{
 
-    public RotaVirus() {
-        super("Rotavirus", "RNA", "Icosahedral", "Spherical", 0.07f);
+    public HepatitisBVirus() {
+        super("Hepatitis B", "DNA", "Icosahedral", "Spherical", 0.042f, "GP41");
     }
 
     @Override

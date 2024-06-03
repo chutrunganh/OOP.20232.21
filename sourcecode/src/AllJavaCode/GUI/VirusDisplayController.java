@@ -4,10 +4,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import AllJavaCode.virus.Displayable;
-import AllJavaCode.virus.EnvelopedVirus;
 import AllJavaCode.virus.Infectable;
 import AllJavaCode.virus.Virus;
-
+import AllJavaCode.virus.enveloped.EnvelopedVirus;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
@@ -63,12 +62,10 @@ public class VirusDisplayController extends BaseController {
             detailsBuilder.append(envelope.getDetails());
         }
         virusDetails.setText(detailsBuilder.toString());
-        virusDetails.setEditable(false);
 
         // Initialize infection description and video
         Infectable infectingVirus = selectedVirus;
         infectionDetails.setText(infectingVirus.getInfectionDescription());
-        infectionDetails.setEditable(false);
         
         try {
             Media media = new Media(getClass().getResource(infectingVirus.getInfectionVideoPath()).toURI().toString());

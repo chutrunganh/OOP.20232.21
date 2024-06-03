@@ -16,7 +16,7 @@
                   <Image url="@image/home-button.png" />
                </image>
             </ImageView>
-            <TextArea fx:id="taDetails" layoutX="80.0" layoutY="80.0" prefHeight="300.0" prefWidth="640.0" style="-fx-background-color: white;" text="Purpose of application: Display structure and infection mechanism of several viruses&#10;&#10;&#10;How to use:&#10;&#10;     -   Click on images to select type of virus and the virus you want to view&#10;&#10;     -   Return to home screen anytime by clicking the Home button at bottom right corner&#10;&#10;     -   To view infection mechanism of a virus, click the Infection tab -&gt; Play">
+            <TextArea editable="false" layoutX="80.0" layoutY="80.0" prefHeight="300.0" prefWidth="640.0" style="-fx-background-color: white;" text="Purpose of application: Display structure and infection mechanism of several viruses&#10;&#10;&#10;How to use:&#10;&#10;     -   Click on images to select type of virus and the virus you want to view&#10;&#10;     -   Return to home screen anytime by clicking the Home button at bottom right corner&#10;&#10;     -   To view infection mechanism of a virus, click the Infection tab -&gt; Play">
                <font>
                   <Font size="16.0" />
                </font></TextArea>

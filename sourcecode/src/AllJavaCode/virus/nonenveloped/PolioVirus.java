@@ -1,9 +1,9 @@
-package AllJavaCode.virus;
+package AllJavaCode.virus.nonenveloped;
 
-public class CoronaVirus extends EnvelopedVirus{
+public class PolioVirus extends NonEnvelopedVirus {
 
-    public CoronaVirus() {
-        super("Coronavirus", "RNA", "Helical", "Spherical", 0.12f, "GP120 with spikes");
+    public PolioVirus() {
+        super("Polio", "RNA", "Icosahedral", "Spherical", 0.03f);
     }
 
     @Override
@@ -15,5 +15,4 @@ public class CoronaVirus extends EnvelopedVirus{
     public String getImagePath() {
         return super.getImagePath() + getName() + ".png";
     }
-
 }

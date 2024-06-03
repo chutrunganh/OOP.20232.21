@@ -1,9 +1,9 @@
-package AllJavaCode.virus;
+package AllJavaCode.virus.enveloped;
 
-public class PolioVirus extends NonEnvelopedVirus {
-
-    public PolioVirus() {
-        super("Poliovirus", "RNA", "Icosahedral", "Spherical", 0.03f);
+public class HIVVirus extends EnvelopedVirus{
+    
+    public HIVVirus() {
+        super("HIV", "RNA", "Icosahedral",  "Spherical", 0.1f, "GP120");
     }
 
     @Override
