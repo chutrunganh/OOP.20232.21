@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 
@@ -19,7 +20,7 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("GUI/HomeScene.fxml"));
             loader.setController(new HomeController(new DataModel()));
-
+            primaryStage.getIcons().add(new Image("AllJavaCode/GUI/Image/icon.png"));
             primaryStage.setResizable(false);
             primaryStage.setTitle("Virus Demonstration");
             primaryStage.setScene(new Scene(loader.load()));
