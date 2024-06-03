@@ -9,6 +9,10 @@ public class NucleicAcid extends VirusComponent{
         this.type = type;
     }
 
+    public String getType() {
+        return type;
+    }
+
     @Override
     public String getDetails() {
         StringBuilder sb = new StringBuilder();

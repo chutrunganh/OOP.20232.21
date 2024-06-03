@@ -9,6 +9,10 @@ public class Capsid extends VirusComponent{
         this.shape = shape;
     }
 
+    public String getShape() {
+        return shape;
+    }
+
     @Override
     public String getDetails() {
         StringBuilder sb = new StringBuilder();

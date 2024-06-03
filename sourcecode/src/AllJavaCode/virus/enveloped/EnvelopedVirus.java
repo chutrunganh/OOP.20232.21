@@ -16,9 +16,22 @@ public class EnvelopedVirus extends Virus {
         return envelope;
     }
     
+    /*
+    Virus with envelop usually has anchors, called glycoprotein. The mechanism for
+    infecting in this case is by lock – key: when reaching the host cell with the suitable
+    outer structure, it uses its glycoproteins to attach, then injects its acid nucleic into the
+    cell
+     */
     @Override
     public String getInfectionDescription() {
-        return "infection in text";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Infection mechanism: ");
+        sb.append(getName());
+        sb.append(" uses its glycoproteins to attach to the host cell ");
+        sb.append("(called the lock-key mechanism), then injects its ");
+        sb.append(getNucleicAcid().getType());
+        sb.append(" into the cell");
+        return sb.toString();
     }
 
     @Override
