@@ -1,11 +1,11 @@
 package AllJavaCode.Virus.RealityViruses.NonEnvelopedViruses;
 
-import AllJavaCode.Virus.AbstractVirus.EnvelopedVirus;
+import AllJavaCode.Virus.AbstractVirus.NonEnvelopedVirus;
 
-public class HepatitisBVirus extends EnvelopedVirus {
+public class RotaVirus extends NonEnvelopedVirus {
 
-    public HepatitisBVirus() {
-        super("HepatitisB", "DNA", "Icosahedral", "Spherical", 0.042f, "GP41");
+    public RotaVirus() {
+        super("Rota", "RNA", "Icosahedral", "Spherical", 0.07f);
     }
 
     @Override

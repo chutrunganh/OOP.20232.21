@@ -1,4 +1,4 @@
-package AllJavaCode.Virus.RealityViruses.EnvelopedViruses;
+package AllJavaCode.Virus.RealityViruses.NonEnvelopedViruses;
 
 import AllJavaCode.Virus.AbstractVirus.NonEnvelopedVirus;
 

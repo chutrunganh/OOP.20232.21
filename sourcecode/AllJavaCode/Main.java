@@ -15,7 +15,6 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-
             // Procedure for loading a new scene and setting a customized FXML Controller
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("GUI/HomeScene.fxml"));
@@ -35,7 +34,6 @@ public class Main extends Application {
                     primaryStage.close(); // This will close the window
                 }
             });
-
             primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
