@@ -1,7 +1,7 @@
-package AllJavaCode.Virus.AbstractVirus;
+package AllJavaCode.Virus;
 
-import AllJavaCode.Virus.AbstractVirus.Component.Capsid;
-import AllJavaCode.Virus.AbstractVirus.Component.NucleicAcid;
+import AllJavaCode.Virus.Component.Capsid;
+import AllJavaCode.Virus.Component.NucleicAcid;
 
 /**
  * Abstract class for a virus which include name, nucleic acid, capsid, shape, and size

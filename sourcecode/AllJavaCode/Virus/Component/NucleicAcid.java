@@ -1,4 +1,4 @@
-package AllJavaCode.Virus.AbstractVirus.Component;
+package AllJavaCode.Virus.Component;
 
 /**
  * This class represents the nucleic acid of a virus, which can be either DNA or RNA.

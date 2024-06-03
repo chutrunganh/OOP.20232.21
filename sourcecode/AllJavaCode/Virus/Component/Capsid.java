@@ -1,4 +1,4 @@
-package AllJavaCode.Virus.AbstractVirus.Component;
+package AllJavaCode.Virus.Component;
 
 /**
  * This class represents the capsid of the virus. A capsid is a protein shell that encloses the viral genome, can

@@ -1,6 +1,7 @@
-package AllJavaCode.Virus.AbstractVirus;
+package AllJavaCode.Virus.EnvelopedViruses;
 
-import AllJavaCode.Virus.AbstractVirus.Component.Envelope;
+import AllJavaCode.Virus.Component.Envelope;
+import AllJavaCode.Virus.Virus;
 
 /**
  * Class for enveloped viruses, extends Virus and includes an envelope as new component

@@ -1,6 +1,4 @@
-package AllJavaCode.Virus.RealityViruses.EnvelopedViruses;
-
-import AllJavaCode.Virus.AbstractVirus.EnvelopedVirus;
+package AllJavaCode.Virus.EnvelopedViruses;
 
 public class HIVVirus extends EnvelopedVirus {
     

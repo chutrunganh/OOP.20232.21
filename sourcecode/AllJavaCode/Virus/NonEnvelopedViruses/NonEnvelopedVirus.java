@@ -1,4 +1,6 @@
-package AllJavaCode.Virus.AbstractVirus;
+package AllJavaCode.Virus.NonEnvelopedViruses;
+
+import AllJavaCode.Virus.Virus;
 
 /**
  * Class for non-enveloped viruses

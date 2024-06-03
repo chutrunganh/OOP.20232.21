@@ -1,6 +1,6 @@
-package AllJavaCode.Virus.AbstractVirus.Component;
+package AllJavaCode.Virus.Component;
 
-import AllJavaCode.Virus.AbstractVirus.Displayable;
+import AllJavaCode.Virus.Displayable;
 
 /**
  * This is the abstract class for all virus components, which is then extended by Capsid, NuclearAcid, and Envelope classes.

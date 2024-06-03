@@ -1,6 +1,4 @@
-package AllJavaCode.Virus.RealityViruses.NonEnvelopedViruses;
-
-import AllJavaCode.Virus.AbstractVirus.NonEnvelopedVirus;
+package AllJavaCode.Virus.NonEnvelopedViruses;
 
 public class PolioVirus extends NonEnvelopedVirus {
 

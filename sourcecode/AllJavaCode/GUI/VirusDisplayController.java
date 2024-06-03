@@ -1,9 +1,9 @@
 package AllJavaCode.GUI;
 
-import AllJavaCode.Virus.AbstractVirus.Displayable;
-import AllJavaCode.Virus.AbstractVirus.EnvelopedVirus;
-import AllJavaCode.Virus.AbstractVirus.Infectable;
-import AllJavaCode.Virus.AbstractVirus.Virus;
+import AllJavaCode.Virus.Displayable;
+import AllJavaCode.Virus.EnvelopedViruses.EnvelopedVirus;
+import AllJavaCode.Virus.Infectable;
+import AllJavaCode.Virus.Virus;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;

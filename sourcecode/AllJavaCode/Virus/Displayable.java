@@ -1,4 +1,4 @@
-package AllJavaCode.Virus.AbstractVirus;
+package AllJavaCode.Virus;
 
 /**
  * Interface for displaying details and images of a virus

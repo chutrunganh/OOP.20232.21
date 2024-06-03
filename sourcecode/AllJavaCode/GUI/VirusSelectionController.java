@@ -1,12 +1,12 @@
 package AllJavaCode.GUI;
 
-import AllJavaCode.Virus.AbstractVirus.Virus;
-import AllJavaCode.Virus.RealityViruses.NonEnvelopedViruses.PolioVirus;
-import AllJavaCode.Virus.RealityViruses.NonEnvelopedViruses.RhinoVirus;
-import AllJavaCode.Virus.RealityViruses.NonEnvelopedViruses.RotaVirus;
-import AllJavaCode.Virus.RealityViruses.EnvelopedViruses.CoronaVirus;
-import AllJavaCode.Virus.RealityViruses.EnvelopedViruses.HIVVirus;
-import AllJavaCode.Virus.RealityViruses.EnvelopedViruses.HepatitisBVirus;
+import AllJavaCode.Virus.Virus;
+import AllJavaCode.Virus.NonEnvelopedViruses.PolioVirus;
+import AllJavaCode.Virus.NonEnvelopedViruses.RhinoVirus;
+import AllJavaCode.Virus.NonEnvelopedViruses.RotaVirus;
+import AllJavaCode.Virus.EnvelopedViruses.CoronaVirus;
+import AllJavaCode.Virus.EnvelopedViruses.HIVVirus;
+import AllJavaCode.Virus.EnvelopedViruses.HepatitisBVirus;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;

@@ -1,4 +1,4 @@
-package AllJavaCode.Virus.AbstractVirus.Component;
+package AllJavaCode.Virus.Component;
 
 /**
  * This class represents the lipid envelope of the Enveloped virus type.
