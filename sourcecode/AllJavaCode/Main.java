@@ -10,18 +10,16 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
         try {
-
             // Procedure for loading a new scene and setting a customized FXML Controller
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("GUI/HomeScene.fxml"));
             loader.setController(new HomeController(new DataModel()));
-
+            primaryStage.getIcons().add(new Image("AllJavaCode/GUI/Image/icon.png"));
             primaryStage.setResizable(false);
             primaryStage.setTitle("Virus Demonstration");
             primaryStage.setScene(new Scene(loader.load()));
@@ -38,7 +36,6 @@ public class Main extends Application {
                     primaryStage.close(); // This will close the window
                 }
             });
-
             primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
