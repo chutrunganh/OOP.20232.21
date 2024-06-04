@@ -20,7 +20,7 @@ public class Main extends Application {
             loader.setLocation(getClass().getResource("gui/HomeScene.fxml"));
             loader.setController(new HomeController(new DataModel()));
             primaryStage.setResizable(false);
-            primaryStage.setTitle("Virus Demonstration");
+            primaryStage.setTitle("virus Demonstration");
             primaryStage.setScene(new Scene(loader.load()));
 
             // Set the icon of the application
