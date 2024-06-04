@@ -94,7 +94,7 @@ public class VirusSelectionController extends BaseController {
         // switch to virus demonstration
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("VirusDisplayScene.fxml"));
+            loader.setLocation(getClass().getResource("scenes/VirusDisplayScene.fxml"));
             loader.setController(new VirusDisplayController(getDataModel()));
             
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

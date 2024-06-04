@@ -16,13 +16,13 @@
 
             <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="120.0" layoutY="134.0" onMouseClicked="#envelopedVirusClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image/enveloped.png" />
+                  <Image url="@../image/enveloped.png" />
                </image>
             </ImageView>
 
             <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="480.0" layoutY="134.0" onMouseClicked="#nonEnvelopedVirusClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image/nonenveloped.png" />
+                  <Image url="@../image/nonenveloped.png" />
                </image>
             </ImageView>
 

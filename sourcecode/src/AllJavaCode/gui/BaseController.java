@@ -30,7 +30,7 @@ public abstract class BaseController implements Initializable{
     void homeButtonClicked(MouseEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("HomeScene.fxml"));
+            loader.setLocation(getClass().getResource("scenes/HomeScene.fxml"));
             loader.setController(new HomeController(model));
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -46,7 +46,7 @@ public abstract class BaseController implements Initializable{
         // create help scene with home button
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("HelpScene.fxml"));
+            loader.setLocation(getClass().getResource("scenes/HelpScene.fxml"));
             loader.setController(new HelpController(model));
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

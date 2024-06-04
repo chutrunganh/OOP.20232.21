@@ -39,7 +39,7 @@ public class HomeController extends BaseController {
         // switch to virus selection
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("VirusSelectionScene.fxml"));
+            loader.setLocation(getClass().getResource("scenes/VirusSelectionScene.fxml"));
             loader.setController(new VirusSelectionController(getDataModel()));
             
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

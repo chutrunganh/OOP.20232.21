@@ -17,7 +17,7 @@
             <ImageView fx:id="image3" fitHeight="200.0" fitWidth="200.0" layoutX="550.0" layoutY="134.0" onMouseClicked="#thirdVirusClicked" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="450.0" onMouseClicked="#homeButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image/home-button.png" />
+                  <Image url="@../image/home-button.png" />
                </image>
             </ImageView>
             <Button layoutX="726.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#helpButtonClicked" prefHeight="40.0" prefWidth="64.0" text="Help">

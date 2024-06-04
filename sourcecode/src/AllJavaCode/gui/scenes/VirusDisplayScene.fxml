@@ -19,7 +19,7 @@
          <children>
             <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="450.0" onMouseClicked="#homeButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image/home-button.png" />
+                  <Image url="@../image/home-button.png" />
                </image>
             </ImageView>
             <TabPane prefHeight="440.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
@@ -53,17 +53,17 @@
                            <children>
                               <TextArea fx:id="infectionDetails" editable="false" layoutX="475.0" layoutY="16.0" prefHeight="366.0" prefWidth="300.0" wrapText="true" />
                               <MediaView fx:id="infectionVideo" fitHeight="300.0" fitWidth="400.0" layoutX="28.0" layoutY="81.0" />
-                              <Button layoutX="30.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#playButtonClicked" prefHeight="40.0" prefWidth="64.0" text="Play">
+                              <Button layoutX="28.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#playButtonClicked" prefHeight="40.0" prefWidth="64.0" text="▶">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="196.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#pauseButtonClicked" prefHeight="40.0" prefWidth="64.0" text="Pause">
+                              <Button layoutX="196.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#pauseButtonClicked" prefHeight="40.0" prefWidth="64.0" text="▐▐">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="361.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#replayButtonClicked" prefHeight="40.0" prefWidth="64.0" text="Replay">
+                              <Button layoutX="364.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#replayButtonClicked" prefHeight="40.0" prefWidth="64.0" text="↺">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
