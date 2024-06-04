@@ -25,7 +25,7 @@ public class EnvelopedVirus extends Virus {
     @Override
     public String getInfectionDescription() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Infection mechanism: ");
+        sb.append("- Infection mechanism: ");
         sb.append(getName());
         sb.append(" uses its glycoproteins to attach to the host cell ");
         sb.append("(called the lock-key mechanism), then injects its ");

@@ -12,7 +12,7 @@ public class NonEnvelopedVirus extends Virus {
     @Override
     public String getInfectionDescription() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Infection mechanism: ");
+        sb.append("- Infection mechanism: ");
         sb.append(getName());
         sb.append(" will dissolve its ");
         sb.append(getCapsid().getShape());
