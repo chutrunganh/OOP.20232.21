@@ -1,4 +1,4 @@
-package AllJavaCode.gui;
+package application.demonstration.gui;
 
 import java.net.URL;
 import java.util.ResourceBundle;

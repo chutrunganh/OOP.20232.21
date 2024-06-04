@@ -1,4 +1,4 @@
-package AllJavaCode.gui;
+package application.demonstration.gui;
 
 import java.io.IOException;
 

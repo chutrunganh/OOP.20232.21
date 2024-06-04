@@ -1,4 +1,4 @@
-package AllJavaCode.virus.enveloped;
+package application.demonstration.virus.enveloped;
 
 public class HepatitisBVirus extends EnvelopedVirus{
 

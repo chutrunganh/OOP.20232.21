@@ -1,16 +1,16 @@
-package AllJavaCode.gui;
+package application.demonstration.gui;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import AllJavaCode.virus.*;
-import AllJavaCode.virus.enveloped.CoronaVirus;
-import AllJavaCode.virus.enveloped.HIVVirus;
-import AllJavaCode.virus.enveloped.HepatitisBVirus;
-import AllJavaCode.virus.nonenveloped.PolioVirus;
-import AllJavaCode.virus.nonenveloped.RhinoVirus;
-import AllJavaCode.virus.nonenveloped.RotaVirus;
+import application.demonstration.virus.Virus;
+import application.demonstration.virus.enveloped.CoronaVirus;
+import application.demonstration.virus.enveloped.HIVVirus;
+import application.demonstration.virus.enveloped.HepatitisBVirus;
+import application.demonstration.virus.nonenveloped.PolioVirus;
+import application.demonstration.virus.nonenveloped.RhinoVirus;
+import application.demonstration.virus.nonenveloped.RotaVirus;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;

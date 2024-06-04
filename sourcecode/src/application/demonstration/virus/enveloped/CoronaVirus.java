@@ -1,18 +1,19 @@
-package AllJavaCode.virus.nonenveloped;
+package application.demonstration.virus.enveloped;
 
-public class PolioVirus extends NonEnvelopedVirus {
+public class CoronaVirus extends EnvelopedVirus{
 
-    public PolioVirus() {
-        super("Poliovirus", "RNA", "Icosahedral", "Spherical", 0.03f);
+    public CoronaVirus() {
+        super("Coronavirus", "RNA", "Helical", "Spherical", 0.12f, "GP120 with spikes");
     }
 
     @Override
     public String getInfectionDescription() {
         StringBuilder sb = new StringBuilder();
         sb.append("- Spreading route(s): ");
-        sb.append("Person-to-person, through fecal-oral, share of water/food, or multiplies in the intestine.\n");
+        sb.append("Through droplets (present on surfaces/objects) from infected person which contains the virus; ");
+        sb.append("enters human body through inhalation.\n");
         sb.append("- Disease/Illness caused: ");
-        sb.append("Polio, causing inability to move body parts such as legs, necks, or internal organs.\n");
+        sb.append("Common cold and respiratory diseases, notably SARS, MERS, and COVID-19.\n");
         sb.append(super.getInfectionDescription());
         return sb.toString();
     }
@@ -26,4 +27,5 @@ public class PolioVirus extends NonEnvelopedVirus {
     public String getImagePath() {
         return super.getImagePath() + getName() + ".png";
     }
+
 }

@@ -1,7 +1,7 @@
-package AllJavaCode.virus;
+package application.demonstration.virus;
 
-import AllJavaCode.virus.component.NucleicAcid;
-import AllJavaCode.virus.component.Capsid;
+import application.demonstration.virus.component.Capsid;
+import application.demonstration.virus.component.NucleicAcid;
 
 public abstract class Virus implements Infectable, Displayable {
 

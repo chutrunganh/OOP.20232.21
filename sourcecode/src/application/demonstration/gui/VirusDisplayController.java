@@ -1,12 +1,12 @@
-package AllJavaCode.gui;
+package application.demonstration.gui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import AllJavaCode.virus.Displayable;
-import AllJavaCode.virus.Infectable;
-import AllJavaCode.virus.Virus;
-import AllJavaCode.virus.enveloped.EnvelopedVirus;
+import application.demonstration.virus.Displayable;
+import application.demonstration.virus.Infectable;
+import application.demonstration.virus.Virus;
+import application.demonstration.virus.enveloped.EnvelopedVirus;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;

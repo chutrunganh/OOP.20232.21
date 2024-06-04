@@ -1,7 +1,7 @@
-package AllJavaCode.virus.enveloped;
+package application.demonstration.virus.enveloped;
 
-import AllJavaCode.virus.Virus;
-import AllJavaCode.virus.component.Envelope;
+import application.demonstration.virus.Virus;
+import application.demonstration.virus.component.Envelope;
 
 public class EnvelopedVirus extends Virus {
 

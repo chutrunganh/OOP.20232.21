@@ -1,4 +1,4 @@
-package AllJavaCode.virus;
+package application.demonstration.virus;
 
 public interface Displayable {
 

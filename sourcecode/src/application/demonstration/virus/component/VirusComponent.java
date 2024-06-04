@@ -1,6 +1,6 @@
-package AllJavaCode.virus.component;
+package application.demonstration.virus.component;
 
-import AllJavaCode.virus.Displayable;
+import application.demonstration.virus.Displayable;
 
 public abstract class VirusComponent implements Displayable {
 

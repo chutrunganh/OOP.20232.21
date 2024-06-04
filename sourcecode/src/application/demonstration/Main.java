@@ -1,7 +1,7 @@
-package AllJavaCode;
+package application.demonstration;
 
-import AllJavaCode.gui.DataModel;
-import AllJavaCode.gui.HomeController;
+import application.demonstration.gui.DataModel;
+import application.demonstration.gui.HomeController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

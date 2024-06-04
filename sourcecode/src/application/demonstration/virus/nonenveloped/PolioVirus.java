@@ -1,20 +1,18 @@
-package AllJavaCode.virus.nonenveloped;
+package application.demonstration.virus.nonenveloped;
 
-public class RhinoVirus extends NonEnvelopedVirus {
+public class PolioVirus extends NonEnvelopedVirus {
 
-    public RhinoVirus() {
-        super("Rhinovirus", "RNA", "Icosahedral", "Spherical", 0.03f);
+    public PolioVirus() {
+        super("Poliovirus", "RNA", "Icosahedral", "Spherical", 0.03f);
     }
-
 
     @Override
     public String getInfectionDescription() {
         StringBuilder sb = new StringBuilder();
         sb.append("- Spreading route(s): ");
-        sb.append("\n\t + Through air (coughing and sneezing)");
-        sb.append("\n\t + Through physical contacts (person-to-person, touching contaminated surfaces/objects, etc.) \n");
+        sb.append("Person-to-person, through fecal-oral, share of water/food, or multiplies in the intestine.\n");
         sb.append("- Disease/Illness caused: ");
-        sb.append("The common cold in human.\n");
+        sb.append("Polio, causing inability to move body parts such as legs, necks, or internal organs.\n");
         sb.append(super.getInfectionDescription());
         return sb.toString();
     }

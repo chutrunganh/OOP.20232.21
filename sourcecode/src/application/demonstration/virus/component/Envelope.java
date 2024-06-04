@@ -1,4 +1,4 @@
-package AllJavaCode.virus.component;
+package application.demonstration.virus.component;
 
 public class Envelope extends VirusComponent{
 
