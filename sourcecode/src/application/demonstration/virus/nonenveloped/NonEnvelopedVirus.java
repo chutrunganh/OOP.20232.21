@@ -2,7 +2,7 @@ package application.demonstration.virus.nonenveloped;
 
 import application.demonstration.virus.Virus;
 
-public class NonEnvelopedVirus extends Virus {
+public abstract class NonEnvelopedVirus extends Virus {
     
     public NonEnvelopedVirus(String name, String nucleicAcidType, String capsidShape, String shape, float size) {
         super(name, nucleicAcidType, capsidShape, shape, size);
@@ -10,7 +10,7 @@ public class NonEnvelopedVirus extends Virus {
 
     // Virus without envelop will dissolve its capsid when reach the target cell
     @Override
-    public String getInfectionDescription() {
+    public String getInfectionMechanism() {
         StringBuilder sb = new StringBuilder();
         sb.append("- Infection mechanism: ");
         sb.append(getName());
@@ -24,11 +24,11 @@ public class NonEnvelopedVirus extends Virus {
 
     @Override
     public String getInfectionVideoPath() {
-        return super.getInfectionVideoPath() + "NonEnvelopedViruses/";
+        return super.getInfectionVideoPath() + "NonEnvelopedViruses/" + getName() + ".mp4";
     }
 
     @Override
     public String getImagePath() {
-        return super.getImagePath() + "NonEnvelopedViruses/";
+        return super.getImagePath() + "NonEnvelopedViruses/" + getName() + ".png";
     }
 }

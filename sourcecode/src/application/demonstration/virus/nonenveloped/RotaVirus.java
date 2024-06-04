@@ -7,24 +7,27 @@ public class RotaVirus extends NonEnvelopedVirus{
     }
 
     @Override
-    public String getInfectionDescription() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("- Spreading route(s): ");
-        sb.append("\n\t + Through air (coughing and sneezing)");
-        sb.append("\n\t + Through hand-to-mouth contacts with feces containing the virus and hand contacts in closed environments.\n");
-        sb.append("- Disease/Illness caused: ");
-        sb.append("Diarrhea (especially in children) and stomach flu.\n");
-        sb.append(super.getInfectionDescription());
-        return sb.toString();
+    public String getSpreadingMethods() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSpreadingMethods'");
     }
 
     @Override
-    public String getInfectionVideoPath() {
-        return super.getInfectionVideoPath() + getName() + ".mp4";
+    public String getCausingDiseases() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCausingDiseases'");
     }
 
-    @Override
-    public String getImagePath() {
-        return super.getImagePath() + getName() + ".png";
-    }
+    // @Override
+    // public String getInfectionDescription() {
+    //     StringBuilder sb = new StringBuilder();
+    //     sb.append("- Spreading route(s): ");
+    //     sb.append("\n\t + Through air (coughing and sneezing)");
+    //     sb.append("\n\t + Through hand-to-mouth contacts with feces containing the virus and hand contacts in closed environments.\n");
+    //     sb.append("- Disease/Illness caused: ");
+    //     sb.append("Diarrhea (especially in children) and stomach flu.\n");
+    //     sb.append(super.getInfectionDescription());
+    //     return sb.toString();
+    // }
+
 }

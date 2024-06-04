@@ -65,7 +65,11 @@ public class VirusDisplayController extends BaseController {
 
         // Initialize infection description and video
         Infectable infectingVirus = selectedVirus;
-        infectionDetails.setText(infectingVirus.getInfectionDescription());
+        StringBuilder sb = new StringBuilder();
+        sb.append(infectingVirus.getSpreadingMethods());
+        sb.append(infectingVirus.getCausingDiseases());
+        sb.append(infectingVirus.getInfectionMechanism());
+        infectionDetails.setText(sb.toString());
         
         try {
             Media media = new Media(getClass().getResource(infectingVirus.getInfectionVideoPath()).toURI().toString());

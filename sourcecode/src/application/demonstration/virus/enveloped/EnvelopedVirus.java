@@ -3,7 +3,7 @@ package application.demonstration.virus.enveloped;
 import application.demonstration.virus.Virus;
 import application.demonstration.virus.component.Envelope;
 
-public class EnvelopedVirus extends Virus {
+public abstract class EnvelopedVirus extends Virus {
 
     private Envelope envelope;
 
@@ -23,7 +23,7 @@ public class EnvelopedVirus extends Virus {
     cell
      */
     @Override
-    public String getInfectionDescription() {
+    public String getInfectionMechanism() {
         StringBuilder sb = new StringBuilder();
         sb.append("- Infection mechanism: ");
         sb.append(getName());
@@ -36,11 +36,11 @@ public class EnvelopedVirus extends Virus {
 
     @Override
     public String getInfectionVideoPath() {
-        return super.getInfectionVideoPath() + "EnvelopedViruses/";
+        return super.getInfectionVideoPath() + "EnvelopedViruses/" + getName() + ".mp4";
     }
 
     @Override
     public String getImagePath() {
-        return super.getImagePath() + "EnvelopedViruses/";
+        return super.getImagePath() + "EnvelopedViruses/" + getName() + ".png";
     }
 }
