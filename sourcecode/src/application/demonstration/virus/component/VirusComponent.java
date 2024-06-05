@@ -26,7 +26,7 @@ public abstract class VirusComponent implements Displayable {
         sb.append(getName());
         sb.append(":\n");
         sb.append(getSpecifications());
-        sb.append("\n\tFunctions:");
+        sb.append("\n\tFunctions: ");
         sb.append(getFunctionalities());
         return sb.toString();
     }
