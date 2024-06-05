@@ -8,27 +8,24 @@ public class HIVVirus extends EnvelopedVirus {
 
     @Override
     public String getSpreadingMethods() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getSpreadingMethods'");
+        StringBuilder sb = new StringBuilder();
+        sb.append(getName());
+        sb.append(" spreading methods: ");
+        // Provide information
+        sb.append("\n\t + Through breast milk, and a small chance from mother to child at birth");
+        sb.append("\n\t + Through needlestick injury, tattooing, piercing");
+        sb.append("\n\t + Through exposure to infected blood and body fluids (except saliva), as well as sexual activities.");
+        return sb.toString();
     }
 
     @Override
     public String getCausingDiseases() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCausingDiseases'");
+        StringBuilder sb = new StringBuilder();
+        sb.append("Diseases/Illnesses caused by ");
+        sb.append(getName());
+        // Provide information
+        sb.append(": Damages the human immune system, leading to AIDS.");
+        return sb.toString();
     }
-
-    // @Override
-    // public String getInfectionDescription() {
-    //     StringBuilder sb = new StringBuilder();
-    //     sb.append("- Spreading route(s): ");
-    //     sb.append("\n\t + Through breast milk, and a small chance from mother to child at birth");
-    //     sb.append("\n\t + Through needlestick injury, tattooing, piercing");
-    //     sb.append("\n\t + Through exposure to infected blood and body fluids (except saliva), as well as sexual activities.\n");
-    //     sb.append("- Disease/Illness caused: ");
-    //     sb.append("Damages the human immune system, leading to AIDS.\n");
-    //     sb.append(super.getInfectionDescription());
-    //     return sb.toString();
-    // }
 
 }

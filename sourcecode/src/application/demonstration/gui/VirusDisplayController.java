@@ -65,9 +65,13 @@ public class VirusDisplayController extends BaseController {
 
         // Initialize infection description and video
         Infectable infectingVirus = selectedVirus;
+        
         StringBuilder sb = new StringBuilder();
+        sb.append("- ");
         sb.append(infectingVirus.getSpreadingMethods());
+        sb.append("\n\n- ");
         sb.append(infectingVirus.getCausingDiseases());
+        sb.append("\n\n- ");
         sb.append(infectingVirus.getInfectionMechanism());
         infectionDetails.setText(sb.toString());
         

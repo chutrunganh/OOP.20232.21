@@ -8,27 +8,23 @@ public class CoronaVirus extends EnvelopedVirus {
 
     @Override
     public String getSpreadingMethods() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getSpreadingMethods'");
+        StringBuilder sb = new StringBuilder();
+        sb.append(getName());
+        sb.append(" spreading methods: ");
+        // Provide information
+        sb.append("Through droplets (present on surfaces/objects) from infected person which contains the virus; ");
+        sb.append("enters human body through inhalation.");
+        return sb.toString();
     }
 
     @Override
     public String getCausingDiseases() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCausingDiseases'");
+        StringBuilder sb = new StringBuilder();
+        sb.append("Diseases/Illnesses caused by ");
+        sb.append(getName());
+        // Provide information
+        sb.append(": Common cold and respiratory diseases, notably SARS, MERS, and COVID-19.");
+        return sb.toString();
     }
-
-    // @Override
-    // public String getInfectionDescription() {
-    //     StringBuilder sb = new StringBuilder();
-    //     sb.append("- Spreading route(s): ");
-    //     sb.append("Through droplets (present on surfaces/objects) from infected person which contains the virus; ");
-    //     sb.append("enters human body through inhalation.\n");
-    //     sb.append("- Disease/Illness caused: ");
-    //     sb.append("Common cold and respiratory diseases, notably SARS, MERS, and COVID-19.\n");
-    //     sb.append(super.getInfectionDescription());
-    //     return sb.toString();
-    // }
-
 
 }
