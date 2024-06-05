@@ -16,3 +16,4 @@ public class HIVVirus extends EnvelopedVirus {
         return super.getImagePath() + getName() + ".png";
     }
 }
+

@@ -16,3 +16,4 @@ public class RhinoVirus extends NonEnvelopedVirus {
         return super.getImagePath() + getName() + ".png";
     }
 }
+

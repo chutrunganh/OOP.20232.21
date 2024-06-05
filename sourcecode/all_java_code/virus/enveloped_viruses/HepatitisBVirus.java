@@ -16,3 +16,4 @@ public class HepatitisBVirus extends EnvelopedVirus {
         return super.getImagePath() + getName() + ".png";
     }
 }
+

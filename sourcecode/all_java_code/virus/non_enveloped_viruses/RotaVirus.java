@@ -16,3 +16,4 @@ public class RotaVirus extends NonEnvelopedVirus {
         return super.getImagePath() + getName() + ".png";
     }
 }
+

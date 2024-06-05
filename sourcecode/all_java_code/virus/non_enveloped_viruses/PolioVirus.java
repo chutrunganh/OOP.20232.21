@@ -16,3 +16,4 @@ public class PolioVirus extends NonEnvelopedVirus {
         return super.getImagePath() + getName() + ".png";
     }
 }
+

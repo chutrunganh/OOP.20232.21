@@ -17,3 +17,4 @@ public class CoronaVirus extends EnvelopedVirus {
     }
 
 }
+
