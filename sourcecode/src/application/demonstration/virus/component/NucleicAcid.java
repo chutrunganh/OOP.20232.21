@@ -14,16 +14,18 @@ public class NucleicAcid extends VirusComponent{
     }
 
     @Override
-    public String getDetails() {
+    public String getSpecifications() {
+        return "\tType: " + type;
+    }
+
+    @Override
+    public String getFunctionalities() {
         StringBuilder sb = new StringBuilder();
-        sb.append(super.getDetails());
-        sb.append("\n\tType: ");
-        sb.append(type);
-        sb.append("\n\tFunctions:");
         sb.append("\n\t\t- Store and express genetic information");
         if (type.equals("DNA")) {
             sb.append("\n\t\t- Keeps information that cells require to produce proteins");
         }
         return sb.toString();
     }
+
 }

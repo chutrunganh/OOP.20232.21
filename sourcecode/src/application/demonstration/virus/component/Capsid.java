@@ -14,12 +14,13 @@ public class Capsid extends VirusComponent{
     }
 
     @Override
-    public String getDetails() {
+    public String getSpecifications() {
+        return "\tShape: " + shape;
+    }
+
+    @Override
+    public String getFunctionalities() {
         StringBuilder sb = new StringBuilder();
-        sb.append(super.getDetails());
-        sb.append("\n\tShape: ");
-        sb.append(shape);
-        sb.append("\n\tFunctions:");
         sb.append("\n\t\t- Protect and deliver the genome (i.e., the nucleic acid)");
         sb.append("\n\t\t- Interact with the host");
         return sb.toString();

@@ -10,13 +10,13 @@ public class Envelope extends VirusComponent{
     }
 
     @Override
-    public String getDetails() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(super.getDetails());
-        sb.append("\n\tGlycoprotein anchors' structure: ");
-        sb.append(anchorType);
-        sb.append("\n\tFunction: ");
-        sb.append("Protect genetic material when travelling between host cells");
-        return sb.toString();
+    public String getSpecifications() {
+        return "\tType of glycoprotein anchors: " + anchorType;
     }
+
+    @Override
+    public String getFunctionalities() {
+        return "Protect genetic material when travelling between host cells";
+    }
+
 }

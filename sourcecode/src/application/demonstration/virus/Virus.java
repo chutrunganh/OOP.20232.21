@@ -43,11 +43,11 @@ public abstract class Virus implements Infectable, Displayable {
     public String getDetails() {
         StringBuilder sb = new StringBuilder();
         sb.append("Virus name: ");
-        sb.append(name);
+        sb.append(getName());
         sb.append("\nShape: ");
-        sb.append(shape);
+        sb.append(getShape());
         sb.append("\nSize: ");
-        sb.append(size); // + length unit
+        sb.append(getSize()); // + length unit
         sb.append(" micrometers");
         return sb.toString();
     }

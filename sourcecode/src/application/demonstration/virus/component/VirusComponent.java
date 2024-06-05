@@ -22,6 +22,15 @@ public abstract class VirusComponent implements Displayable {
     
     @Override
     public String getDetails() {
-        return "Component: " + name;
+        StringBuilder sb = new StringBuilder();
+        sb.append(getName());
+        sb.append(":\n");
+        sb.append(getSpecifications());
+        sb.append("\n\tFunctions:");
+        sb.append(getFunctionalities());
+        return sb.toString();
     }
+
+    public abstract String getSpecifications();
+    public abstract String getFunctionalities();
 }
