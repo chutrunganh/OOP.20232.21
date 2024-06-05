@@ -53,7 +53,7 @@
                         <AnchorPane prefHeight="318.0" prefWidth="635.0">
                            <children>
                               <TextArea fx:id="infectionDetails" editable="false" layoutX="475.0" layoutY="16.0" prefHeight="366.0" prefWidth="300.0" wrapText="true" />
-                              <MediaView fx:id="infectionVideo" fitHeight="300.0" fitWidth="400.0" layoutX="28.0" layoutY="81.0" />
+                              <MediaView fx:id="infectionVideo" fitHeight="225.0" fitWidth="400.0" layoutX="28.0" layoutY="81.0" />
                               <Button layoutX="28.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#playButtonClicked" prefHeight="40.0" prefWidth="64.0" text="▶">
                                  <font>
                                     <Font size="14.0" />
@@ -69,6 +69,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
+                              <Label layoutX="28.0" layoutY="353.0" prefHeight="40.0" prefWidth="386.0" text="(For unresolvable issues, please stop the media using the Pause button before leaving this demonstration)" wrapText="true" />
                            </children>
                         </AnchorPane>
                      </content></Tab>
@@ -79,7 +80,6 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Label layoutX="115.0" layoutY="462.0" text="(For unresolvable issues, please stop the media using the Pause button before leaving this demonstration)" />
          </children>
     </AnchorPane>
   </children>
