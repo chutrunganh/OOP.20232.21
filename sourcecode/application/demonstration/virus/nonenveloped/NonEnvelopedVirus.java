@@ -22,13 +22,14 @@ public abstract class NonEnvelopedVirus extends Virus {
         return sb.toString();
     }
 
+    // Extends addresses to directories of medias for non-enveloped viruses
     @Override
     public String getInfectionVideoPath() {
-        return super.getInfectionVideoPath() + "NonEnvelopedViruses/" + getName() + ".mp4";
+        return super.getInfectionVideoPath() + "NonEnvelopedViruses/";
     }
 
     @Override
     public String getImagePath() {
-        return super.getImagePath() + "NonEnvelopedViruses/" + getName() + ".png";
+        return super.getImagePath() + "NonEnvelopedViruses/";
     }
 }

@@ -33,13 +33,14 @@ public abstract class EnvelopedVirus extends Virus {
         return sb.toString();
     }
 
+    // Extend addresses to directories of medias for enveloped viruses
     @Override
     public String getInfectionVideoPath() {
-        return super.getInfectionVideoPath() + "EnvelopedViruses/" + getName() + ".mp4";
+        return super.getInfectionVideoPath() + "EnvelopedViruses/";
     }
 
     @Override
     public String getImagePath() {
-        return super.getImagePath() + "EnvelopedViruses/" + getName() + ".png";
+        return super.getImagePath() + "EnvelopedViruses/";
     }
 }
