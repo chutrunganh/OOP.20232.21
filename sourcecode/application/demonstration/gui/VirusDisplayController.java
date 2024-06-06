@@ -101,4 +101,19 @@ public class VirusDisplayController extends BaseController {
             mediaPlayer.play();
         }
     }
+
+    // Media should be stopped upon changing scenes
+    @Override
+    @FXML
+    void homeButtonClicked(MouseEvent event) {
+        infectionVideo.getMediaPlayer().pause();
+        super.homeButtonClicked(event);
+    }
+
+    @Override
+    @FXML
+    void helpButtonClicked(MouseEvent event) {
+        infectionVideo.getMediaPlayer().pause();
+        super.helpButtonClicked(event);
+    }
 }
