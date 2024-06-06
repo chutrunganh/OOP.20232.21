@@ -26,4 +26,15 @@ public class PolioVirus extends NonEnvelopedVirus {
         return sb.toString();
     }
 
+    // Override media-acquiring methods to extend addresses with medias' names
+    @Override
+    public String getInfectionVideoPath() {
+        return super.getInfectionVideoPath() + "Poliovirus.mp4";
+    }
+
+    @Override
+    public String getImagePath() {
+        return super.getImagePath() + "Poliovirus.png";
+    }
+
 }

@@ -51,11 +51,14 @@ public abstract class Virus implements Infectable, Displayable {
         sb.append(" micrometers");
         return sb.toString();
     }
+
+    // Address to image directory
     @Override
     public String getImagePath() {
         return "image/";
     }
 
+    // Address to video directory
     @Override
     public String getInfectionVideoPath() {
         return "video/";
