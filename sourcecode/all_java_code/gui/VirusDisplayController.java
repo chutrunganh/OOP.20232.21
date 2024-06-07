@@ -43,7 +43,7 @@ public class VirusDisplayController extends BaseController {
         //System.out.println("Error in VirusDisplayController.java");
 
         // Get the selected virus and type from the dataModel
-        Virus selectedVirus = getDataModel().getVirus();
+        Virus selectedVirus = getDataModel().getVirus();  //Upcasting the specific virus to the general Virus class
         String selectedType = getDataModel().getType();
 
         // Calling the interface methods for objects. Each object can display its details and image
@@ -61,7 +61,8 @@ public class VirusDisplayController extends BaseController {
 
         // Initialize virus details
         StringBuilder detailsBuilder = new StringBuilder();
-        detailsBuilder.append(virus.getDetails());
+        detailsBuilder.append(virus.getDetails()); // .getDetails() is dynamically blinding. Called by class Virus, but the actual method is in the specific virus class
+        //that passed in before upcasting to the general Virus class
         detailsBuilder.append("\n");
         detailsBuilder.append(capsid.getDetails());
         detailsBuilder.append("\n");
