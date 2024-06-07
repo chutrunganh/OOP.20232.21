@@ -11,6 +11,19 @@ bin/
 .classpath
 .project
 
+# Congig, out file from IntelliJ and VSCode
+.idea/
+.vscode/
+/out/
+out/
+bin/
+.run/
+
+# config file from Eclipse
+.settings/
+.classpath
+.project
+
 # Compiled class file
 *.class
 
