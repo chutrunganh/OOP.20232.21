@@ -23,6 +23,21 @@
 # Overeview 📝
 The global spread of COVID-19 has underscored the importance of understanding various types of viruses and their modes of transmission. This knowledge is fundamental in devising effective prevention strategies. Motivated by this need, our team has developed this JavaFX project.
 
+# Contributors 🤝
+
+We would like to express our gratitude to the following contributors:
+
+- Project Advisor: **Nguyen Thi Thu trang**
+- Team Members:
+
+  | Team Members | ID | Package Virus | Package GUI | README | Slide | Report | Diagram |
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+  | Chu Trung Anh | 20225564 | 20% | 40% | 50% | 20% | 30% | 30% |
+  | Phan Tran Viet Bach | 20225435 | 60% | 20% | 20% | 30% | 50% | 40% |
+  | Nguyen Huu Cong | 20225476 | 20% | 40% | 30% | 50% | 20% | 30% |
+
+***For the demo UI video, visit this [link](https://husteduvn-my.sharepoint.com/:v:/g/personal/anh_ct225564_sis_hust_edu_vn/EfbyFW8w81tIg6k23O_2JIsBnrF1YS8xHUNegNK3qyXTgA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=KgYgoQ)***
+
 # Installation ⚒️
 
 
@@ -53,16 +68,8 @@ For more information about these features, click on the `help` button or refer t
 ). 
 
 
-# Contributors 🤝
 
-We would like to express our gratitude to the following contributors:
 
-- Project Advisor: **Nguyen Thi Thu trang**
-- Team Members:
-    - **Chu Trung Anh** 20225564 : README file, virus package
-    - **Phan Tran viet Bach** 20225435 : Present, virus package
-    - **Nguyen Huu Cong** 20225476 : Report, diagram, gui package
-    
 
 
 
