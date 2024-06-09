@@ -56,16 +56,7 @@ Ensure that your system is equipped with the Java JDK, specifically version 9.0 
 Upon successful completion of the above steps, you are prepared to commence exploration of the project.
 
 
-# Features 🕹️
 
-- Choose from various types of viruses for a focused study
-
-- View the detailed structure of a specific virus to understand its composition
-
-- Examine the detailed infection mechanism of a specific virus to learn how it operates in text and video.
-
-For more information about these features, click on the `help` button or refer to our [Use Case Diagram](https://github.com/chutrunganh/OOP.20232.21/blob/master/design/Use%20case%20Diagram/usecase.png
-). 
 
 
 
