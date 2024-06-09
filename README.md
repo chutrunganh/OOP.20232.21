@@ -36,8 +36,7 @@ We would like to express our gratitude to the following contributors:
   | Phan Tran Viet Bach | 20225435 | 60% | 20% | 20% | 30% | 50% | 40% |
   | Nguyen Huu Cong | 20225476 | 20% | 40% | 30% | 50% | 20% | 30% |
 
-***For the demo UI video, visit this [link](https://husteduvn-my.sharepoint.com/:v:/g/personal/anh_ct225564_sis_hust_edu_vn/EfbyFW8w81tIg6k23O_2JIsBnrF1YS8xHUNegNK3qyXTgA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=KgYgoQ)***
-
+***For the demo UI video, visit this [link](https://husteduvn-my.sharepoint.com/:v:/g/personal/anh_ct225564_sis_hust_edu_vn/EXc8WmAr1N5Ej45J4fuiingByaNBzxnvWKsdtx3GP9K8pQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=JUN1vg)***
 # Installation ⚒️
 
 
