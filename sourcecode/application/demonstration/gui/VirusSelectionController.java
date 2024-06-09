@@ -105,5 +105,4 @@ public class VirusSelectionController extends BaseController {
             e.printStackTrace();
         }
     }
-
 }

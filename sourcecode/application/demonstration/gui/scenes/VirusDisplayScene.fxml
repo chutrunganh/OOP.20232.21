@@ -13,7 +13,7 @@
 <?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
@@ -52,10 +52,10 @@
                         <AnchorPane prefHeight="318.0" prefWidth="635.0">
                            <children>
                               <TextArea fx:id="infectionDetails" editable="false" layoutX="475.0" layoutY="16.0" prefHeight="366.0" prefWidth="300.0" wrapText="true" />
-                              <MediaView fx:id="infectionVideo" fitHeight="250.0" fitWidth="430.0" layoutX="28.0" layoutY="81.0" />
-                              <Button layoutX="28.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#playButtonClicked" prefHeight="40.0" prefWidth="71.0" text="▶">
+                              <MediaView fx:id="infectionVideo" fitHeight="225.0" fitWidth="400.0" layoutX="28.0" layoutY="81.0" />
+                              <Button layoutX="28.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#playButtonClicked" prefHeight="40.0" prefWidth="64.0" text="▶">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Button>
                               <Button layoutX="196.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#pauseButtonClicked" prefHeight="40.0" prefWidth="64.0" text="▐▐">
@@ -65,7 +65,7 @@
                               </Button>
                               <Button layoutX="364.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#replayButtonClicked" prefHeight="40.0" prefWidth="64.0" text="↺">
                                  <font>
-                                    <Font name="System Bold" size="21.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Button>
                            </children>
