@@ -21,7 +21,7 @@
 </div>
 
 # Overeview 📝
-The global spread of COVID-19 has underscored the importance of understanding various types of viruses and their modes of transmission. This knowledge is fundamental in devising effective prevention strategies. Motivated by this need, our team has developed this JavaFX project.
+The global spread of COVID-19 has underscored the importance of understanding various types of viruses and their modes of transmission. This knowledge is fundamental in devising effective prevention strategies. Motivated by this need, our team has developed this Java project.
 
 # Contributors 🤝
 
@@ -36,7 +36,7 @@ We would like to express our gratitude to the following contributors:
   | Phan Tran Viet Bach | 20225435 | 60% | 20% | 20% | 30% | 50% | 40% |
   | Nguyen Huu Cong | 20225476 | 20% | 40% | 30% | 50% | 20% | 30% |
 
-***For the demo UI video, visit this [link](https://husteduvn-my.sharepoint.com/:v:/g/personal/anh_ct225564_sis_hust_edu_vn/EfbyFW8w81tIg6k23O_2JIsBnrF1YS8xHUNegNK3qyXTgA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=KgYgoQ)***
+***For the demo video, visit this [link](https://husteduvn-my.sharepoint.com/:v:/g/personal/anh_ct225564_sis_hust_edu_vn/EfbyFW8w81tIg6k23O_2JIsBnrF1YS8xHUNegNK3qyXTgA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=KgYgoQ)***
 
 # Installation ⚒️
 
@@ -47,7 +47,7 @@ git clone https://github.com/chutrunganh/OOP.20232.21.git
 ```
 **2. Install dependencies**
 
-Ensure that your system is equipped with the Java JDK, specifically version 9.0 or above, and corresponding JavaFX version t. It is also crucial to add the VM option to your IDE to ensure proper functionality:
+Ensure that your system is equipped with the Java JDK, specifically version 8.0 or above, and corresponding JavaFX version. It is also crucial to add the VM option to your IDE to ensure proper functionality:
 ```plaintext
 --module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml,javafx.media
 ```
