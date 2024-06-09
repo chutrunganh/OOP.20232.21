@@ -27,16 +27,16 @@ The global spread of COVID-19 has underscored the importance of understanding va
 
 We would like to express our gratitude to the following contributors:
 
-- Project Advisor: **Nguyen Thi Thu trang**
+- Project Advisor: **Nguyen Thi Thu Trang**
 - Team Members:
 
   | Team Members | ID | Package Virus | Package GUI | README | Slide | Report | Diagram |
     | --- | --- | --- | --- | --- | --- | --- | --- |
-  | Chu Trung Anh | 20225564 | 20% | 40% | 50% | 20% | 30% | 30% |
+  | Chu Trung Anh (leader) | 20225564 | 20% | 40% | 50% | 20% | 30% | 30% |
   | Phan Tran Viet Bach | 20225435 | 60% | 20% | 20% | 30% | 50% | 40% |
   | Nguyen Huu Cong | 20225476 | 20% | 40% | 30% | 50% | 20% | 30% |
 
-***For the demo UI video, visit this [link](https://husteduvn-my.sharepoint.com/:v:/g/personal/anh_ct225564_sis_hust_edu_vn/EXc8WmAr1N5Ej45J4fuiingByaNBzxnvWKsdtx3GP9K8pQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=JUN1vg)***
+***For the demo video, visit this [link](https://husteduvn-my.sharepoint.com/:v:/g/personal/anh_ct225564_sis_hust_edu_vn/EXc8WmAr1N5Ej45J4fuiingByaNBzxnvWKsdtx3GP9K8pQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=JUN1vg)***
 # Installation ⚒️
 
 
