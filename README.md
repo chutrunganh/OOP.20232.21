@@ -32,7 +32,8 @@ We would like to express our gratitude to the following contributors:
 
   | Team Members | ID | Package Virus | Package GUI | README | Slide | Report | Diagram |
     | --- | --- | --- | --- | --- | --- | --- | --- |
-  | Chu Trung Anh | 20225564 | 20% | 40% | 50% | 20% | 30% | 30% |
+  | Chu Trung Anh (leader) | 20225564 | 20% | 40% | 50% | 20% | 30% | 30% |
+  
   | Phan Tran Viet Bach | 20225435 | 60% | 20% | 20% | 30% | 50% | 40% |
   | Nguyen Huu Cong | 20225476 | 20% | 40% | 30% | 50% | 20% | 30% |
 
