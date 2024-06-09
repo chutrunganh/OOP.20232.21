@@ -15,11 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
-import javafx.scene.image.ImageView;
 import javafx.util.Duration;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 /**
  * Controller for the virus Display scene

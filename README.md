@@ -21,7 +21,7 @@
 </div>
 
 # Overeview 📝
-The global spread of COVID-19 has underscored the importance of understanding various types of viruses and their modes of transmission. This knowledge is fundamental in devising effective prevention strategies. Motivated by this need, our team has developed this JavaFX project.
+The global spread of COVID-19 has underscored the importance of understanding various types of viruses and their modes of transmission. This knowledge is fundamental in devising effective prevention strategies. Motivated by this need, our team has developed this Java project.
 
 # Contributors 🤝
 
@@ -46,7 +46,7 @@ git clone https://github.com/chutrunganh/OOP.20232.21.git
 ```
 **2. Install dependencies**
 
-Ensure that your system is equipped with the Java JDK, specifically version 9.0 or above, and corresponding JavaFX version t. It is also crucial to add the VM option to your IDE to ensure proper functionality:
+Ensure that your system is equipped with the JDK of version 8.0 or above and corresponding JavaFX version. It is also crucial to add the VM option to your IDE to ensure proper functionality:
 ```plaintext
 --module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml,javafx.media
 ```
