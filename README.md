@@ -20,7 +20,7 @@
 
 </div>
 
-# Overeview 📝
+# Overview 📝
 The global spread of COVID-19 has underscored the importance of understanding various types of viruses and their modes of transmission. This knowledge is fundamental in devising effective prevention strategies. Motivated by this need, our team has developed this Java project.
 
 # Contributors 🤝
