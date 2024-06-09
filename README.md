@@ -52,7 +52,7 @@ Ensure that your system is equipped with the JDK of version 8.0 or above and cor
 ```
 *Replace ${PATH_TO_FX} with the actual path to the `lib` directory of JavaFX in your machine.*
 
-Upon successful completion of the above steps, you are prepared to commence exploration of the project.
+Upon successful completion of the above steps, you are prepared to commence exploration of the project. Open the repository with your IDE/code editor that can compile and run Java files and run the Main class: sourcecode/application/demonstration/Main.java. Should the application execute, you can begin investigating the viruses. Refer to the Help section in the app for further instructions if you need.
 
 
 
