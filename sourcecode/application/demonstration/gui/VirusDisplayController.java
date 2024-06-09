@@ -39,8 +39,6 @@ public class VirusDisplayController extends BaseController {
     @Override
     public void initialize(URL locations, ResourceBundle resources) {
 
-        //System.out.println("Error in VirusDisplayController.java");
-
         // Get the selected virus and type from the dataModel
         Virus selectedVirus = getDataModel().getVirus();
         String selectedType = getDataModel().getType();
@@ -86,7 +84,6 @@ public class VirusDisplayController extends BaseController {
         infectionDetails.setText(sb.toString());
 
         try {
-            System.out.println(infectingVirus.getInfectionVideoPath());
             Media video = new Media(getClass().getResource(infectingVirus.getInfectionVideoPath()).toURI().toString());
             infectionVideo.setMediaPlayer(new MediaPlayer(video));
         } catch (Exception e) {
