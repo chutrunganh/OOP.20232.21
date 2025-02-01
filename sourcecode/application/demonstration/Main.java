@@ -20,7 +20,7 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("gui/scenes/HomeScene.fxml"));
             loader.setController(new HomeController(new DataModel()));
-            primaryStage.getIcons().add(new Image("application/demonstration/gui/image/appIcon1.png"));
+            primaryStage.getIcons().add(new Image("application/demonstration/gui/image/appIcon1.ico"));
 
             primaryStage.setResizable(false);
             primaryStage.setTitle("Virus Demonstration");

@@ -1,6 +1,7 @@
 package application.demonstration.gui;
 
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 import application.demonstration.virus.Displayable;
@@ -84,7 +85,7 @@ public class VirusDisplayController extends BaseController {
         infectionDetails.setText(sb.toString());
 
         try {
-            Media video = new Media(getClass().getResource(infectingVirus.getInfectionVideoPath()).toURI().toString());
+            Media video = new Media(Objects.requireNonNull(getClass().getResource(infectingVirus.getInfectionVideoPath())).toURI().toString());
             infectionVideo.setMediaPlayer(new MediaPlayer(video));
         } catch (Exception e) {
             e.printStackTrace();
@@ -117,6 +118,12 @@ public class VirusDisplayController extends BaseController {
     @Override
     @FXML
     void homeButtonClicked(MouseEvent event) {
+        // In case the Media is null
+        if (infectionVideo.getMediaPlayer() == null) {
+            super.homeButtonClicked(event);
+            return;
+        }
+        // Stop the video
         infectionVideo.getMediaPlayer().pause();
         super.homeButtonClicked(event);
     }
@@ -124,6 +131,11 @@ public class VirusDisplayController extends BaseController {
     @Override
     @FXML
     void helpButtonClicked(MouseEvent event) {
+        // In case the Media is null
+        if (infectionVideo.getMediaPlayer() == null) {
+            super.helpButtonClicked(event);
+            return;
+        }
         infectionVideo.getMediaPlayer().pause();
         super.helpButtonClicked(event);
     }
