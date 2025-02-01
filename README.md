@@ -50,7 +50,7 @@ The global spread of COVID-19 has underscored the importance of understanding va
 
 # ⚒️ Installation 
 
-You can experience the application by simply downloading and running the `jar` file from the [release page](https://github.com/chutrunganh/OOP.20232.21/releases/tag/v1.0.0) (require Java version 23 or newer).
+You can experience the application by simply downloading and running the `jar` file from the [release page](https://github.com/chutrunganh/OOP.20232.21/releases/) (require Java version 23 or newer).
 However, this jar file encounters some problems when display mp4 format videos on certain platforms, so the video may not display, but other features will still work properly.
 
 With the jar file, you can double-click to run the application if your system supports it. Otherwise, you can run the following command in the terminal:
@@ -104,7 +104,7 @@ We would like to express our gratitude to the following contributors:
 - Team Members:
 
   | Team Members | ID | Package Virus | Package GUI | README | Slide | Report | Diagram |
-      | --- | --- | --- | --- | --- | --- | --- | --- |
+  | --- | --- | --- | --- | --- | --- | --- | --- |
   | Chu Trung Anh (leader) | 20225564 | 20% | 40% | 50% | 20% | 30% | 30% |
   | Phan Tran Viet Bach | 20225435 | 60% | 20% | 20% | 30% | 50% | 40% |
   | Nguyen Huu Cong | 20225476 | 20% | 40% | 30% | 50% | 20% | 30% |
